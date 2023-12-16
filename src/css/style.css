@@ -1,0 +1,799 @@
+:root{
+    --main-color: #2A4747;
+    --lighter-color: #087F8C;
+    --primary-color: #095256;
+    --secondary-color: #439775;
+    --white-color: #ffff;
+    --white-secondary: #fafafa;
+    --white-primary: #f9f9f9;
+    --white-darker: #cccccc;
+    --color-danger: #ED0800;
+    --color-lavender: #E6E6FA;
+    --color-green: #5cb85c;
+    --font-size-10: 10px;
+    --font-size-12: 12px;
+    --font-size-13: 13px;
+    --font-size-15: 15px;
+    --padding-bottom-lg: 
+
+}
+/* body design starts here */
+.icon-color{
+    color: var(--secondary-color);
+}
+.text-color{
+    color: var(--main-color);
+}
+.primary-icon-color{
+    color: var(--main-color);
+}
+.button-color{
+    background-color: var(--primary-color);
+}
+.theme-color{
+    background: var(--lighter-color);
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #fafafa;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+    color: var(--main-color);
+    padding: 0;
+    margin: 0;
+    }
+ /* body design ends here */
+ 
+ /* font weight starts here */
+ .fw-1{
+   font-weight: 300;
+ }
+ .fw-2{
+     font-weight: 400;
+ }
+ .fw-3{
+     font-weight: 500;
+ }
+ .fw-4{
+     font-weight: 600;
+ }
+ .fw-5{
+     font-weight: 700;
+ }
+
+ /* font weight section ends here */
+ 
+ /* font size  start */
+ .fs-7{
+     font-size: var(--font-size-10);
+   }
+ .fs-6{
+     font-size: var(--font-size-12);
+ }
+ .fs-12{
+     font-size: var(--font-size-12);
+ }
+ /* font size end */
+ 
+ /* move top starts here */
+ .top-half-2{
+     position: relative;
+     top: -2px;
+     margin: 1px;
+ }
+ .top-half{
+     position: relative;
+     top: 2.5px;
+ }
+ .top-1{
+     position: relative;
+     top: -5px;
+ } 
+ .top-2{
+     position: relative;
+     top: -10px;
+ }
+ .top-3{
+     position: relative;
+     top: -15px;
+ }
+ .top-4{
+     position: relative;
+     top: -20px;
+ }
+ .top-5{
+     position: relative;
+     top: -25px;
+ }
+ /* moving elements to the top ends here */
+ 
+ /*moving elements to the bottom ends here */
+ .bottom-half{
+     top: 2px;
+     position: relative;
+ }
+ .bottom-1{
+     position: relative;
+     top: 5px;
+ }
+ .bottom-2{
+     position: relative;
+     top: 10px;
+ }
+ .bottom-3{
+     position: relative;
+     top: 15px;
+ }
+ .bottom-4{
+     position: relative;
+     top: 20px;
+ }
+ .bottom-5{
+     position: relative;
+     top: 25px;
+ }
+ /* moving elements to the bottom ends here */
+ 
+ /* moving elements to the left starts here */
+ .left-1{
+     position: relative;
+     right: 5px;
+ }
+ .left-2{
+     position: relative;
+     right: 10px;
+ }
+ .left-3{
+     position: relative;
+     right: 15px;
+ }
+ .left-4{
+     position: relative;
+     right: 20px;
+ }
+ .left-5{
+    position: relative;
+    right: 25px;
+ }
+ 
+ /* moving elements to the right starts here */
+ .right-1{
+     position: relative;
+     left: 5px;
+ }
+ .right-2{
+     position: relative;
+     left: 10px;
+ }
+ .right-3{
+     position: relative;
+     left: 15px;
+ }
+ .right-4{
+     position: relative;
+     left: 20px;
+ }
+ .right-5{
+     position: relative;
+     left: 25px;
+ }
+ /*mooving elements to the right starts here  */
+ 
+ 
+ /* text colors  start*/
+ .c-grey{
+     color: darkgrey;
+ }
+ .c-white{
+   color: #fff;
+ }
+ .c-grey-light{
+     color: #5555;
+ }
+ .c-stbl{
+     color: steelblue;
+ }
+ .c-green{
+     color: forestgreen;
+ }
+ .c-red{
+     color: var(--color-danger);
+ }
+ /* text colors end*/
+ 
+ /* background colors start*/ 
+ .bg-fgreen{
+   background: var(--color-green);
+ }
+ .bg-lav{
+     background: var(--color-lavender);
+ }
+ .bg-f9{
+    background: var(--white-primary);
+ }
+ .bg-info-st{
+     background: linear-gradient(107deg, rgb(13, 198, 180) 8.1%, rgb(33, 198, 138) 79.5%);
+ }
+ .bg-info-st-two{
+    background: radial-gradient(circle at 10% 20%, rgb(149, 219, 254) 0%, rgb(7, 134, 197) 90.1%);
+ }
+ .bg-t{
+    background: transparent;
+}
+ /*background colors ends */
+ 
+ /*custom button design starts here */
+ .login-lg{
+    
+     border-radius: 25px;
+     color: var(--white-color);
+     background: steelblue;
+ }
+ .signup-lg{
+    
+     border-radius: 25px;
+     color: var(--white-color);
+     background: var(--color-green);  
+ }
+ .btn-list{
+     border-radius: 15px;
+     max-width: 250px;
+     width: auto;
+     border: none;
+     letter-spacing: .5px;
+ }
+ .btn-odd-details{
+     width: 31%;
+     border: none;
+     border-radius: 5px;
+ }
+ .btn-sm{
+     width: 140px;
+     font-size: var(--font-size-12);
+     border: none;
+ }
+ .bet{
+     background: var(--color-green);
+     color: var(--white-color);
+     font-weight: 500;
+     padding: 5px;
+     width: 4em;
+     border-radius: 0;
+ }
+ .bet-btn{
+    width: 15%;
+    border: none;
+    background-color: var(--color-green);
+    height: 25%;
+    color: var(--white-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+.bet-live{
+    border: none;
+    width: 30%;
+    font-size: var(--font-size-12);
+    border-radius: 5px;
+}
+.button{
+    border: none;
+    background-color: transparent;
+ }
+ .icon-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--white-color);
+    background: var(--primary-color);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+ /* custom button design ends here */
+ 
+ /* match box designs */
+ .toggle-active{
+    border: none;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    font-size: var(--font-size-12);
+    text-decoration: none;
+ }
+ .toggle-inactive{
+    border: none;
+    color: var(--main-color);
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: var(--font-size-12);
+    text-decoration: none;
+ }
+ .team-logo{
+     width: 75%;
+     height: 75%;
+ }
+ .team-logo-sm{
+    width: 20px;
+    height: 20px;
+ }
+ .scores-half{
+   font-size: 10px;
+   position: relative;
+   top: -10px;
+   font-weight: 500;
+ }
+ .home-team-circle-one{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #ccc;
+}
+.home-team-circle-two{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--white-color);
+    position: relative;
+    left: 5px;
+    top: 5px;
+}
+.match-details-circle-one{
+   width: 65px;
+   height: 65px;
+   border-radius: 50%;
+   background: #ccc;
+  
+}
+.match-details-circle-two{
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background: var(--white-color);
+   position: relative;
+   left: 5px;
+   top: 5px;  
+}
+#away-team-name{
+    max-width: 5em;
+    width: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  #home-team-name{
+    max-width: 5em;
+    width: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+ /*match box design ends*/
+ 
+ 
+ /* badges start */
+.badge-md{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--white-primary);
+    color: #5555;
+    font-size: var(--font-size-12);
+    border: none;
+ }
+ .badge-lg
+ {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--white-primary);
+    color: #5555;
+    font-size: var(--font-size-12);
+    border: none; 
+ }
+ .badge-xl{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--white-primary);
+    color: #5555;
+    font-size: var(--font-size-12);
+    border: none; 
+ }
+ .badge-sm{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--white-primary);
+    color: #5555;
+    border: none;
+ }
+ .icon-button__badge {
+    position: absolute;
+    bottom: -5px;
+    left: 29px;
+    width: 21px;
+    height: 21px;
+    background: var(--color-danger);
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--white-color);
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  .badge-xx-sm
+ {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: var(--white-color);
+    background: var(--color-danger);
+    font-size: var(--font-size-10);
+    position: relative;
+    top: -8px;
+    left: 43px;
+    border: 2px solid var(--white-color);
+ }
+
+ .badge-vw{
+    max-width: 40px;
+    height: 25px;
+    width: auto;
+    border-radius: 50%;
+    background-color: var(--white-primary);
+    color: #5555;
+    border: none;
+    font-size: var(--font-size-12);
+ }
+ .badge-warning{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    font-size: var(--font-size-13);
+ }
+ /* badges end */
+  
+ /*container design start */
+ .container{
+     max-width: 1600px;
+ }
+ #matches-container{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+    max-height: 650px;
+ }
+ #stat-section{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+    max-height: 650px;
+ }
+ #match-events{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+    max-height: 650px;
+ }
+ #slip-events
+ {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+ }
+ #mid-section{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+    max-height: 650px;
+ }
+ #markets{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+    max-height: 500px;
+ }
+ /*container design ends */
+ 
+ /*navbar two design starts */
+ .nav-top{
+     white-space: nowrap;
+     overflow-x: auto;
+     overflow-y: hidden;
+     white-space: nowrap;  
+ }
+ #nav-top-two{
+     white-space: nowrap;
+     overflow-x: auto;
+     overflow-y: hidden;
+     white-space: nowrap;
+ }
+ .nav-top-list{
+     border: none;
+     width: 250px;
+     font-size: var(--font-size-10);
+     border-radius: 5px;
+     background: var(--white-primary);
+ }
+ .nav-top-list-two
+ {
+     width: 220px;
+     border: none;
+     font-size: var(--font-size-13);
+     border-radius: 25px;
+ }
+ .menu-tow{
+     width: auto;
+     max-width: 550px;
+     overflow: scroll;
+     overflow-y: hidden;
+     white-space: nowrap;
+ }
+ .active{
+     color: var(--main-color);
+     background-color: #a8e6cf;
+ }
+ .inactive{
+    background-color: #a8e6cf;
+    color: #004445;
+ }
+ .nav-active{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+ }
+ .link{
+    all: unset;
+    cursor: pointer;
+ }
+ .nav-link-bottom{
+    border: none;
+    border-radius: 50%;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    width: 28px;
+    height: 28px;
+ }
+ .pb-xl{
+    padding-bottom: 8em;
+ }
+ .pb-xxl{
+    padding-bottom: 15em;
+ }
+ .pd-sm{
+    padding-bottom: 5em;
+ }
+ /* navbar two design ends */
+ 
+ 
+ /* sections design  start */
+ #last-section
+ {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+    max-height: 650px;
+ }
+ 
+ #first-sec-list{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+    max-height: 650px;
+ }
+ .event-list-history{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+    max-height: 500px;
+ }
+ .stats-list{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+    max-height: 8em; 
+ }
+ /* section design ends */
+
+ /* scroll bar starts */
+ #match-events::-webkit-scrollbar
+ {
+  width: 2px;
+   position: relative; 
+   top: 15px;
+   border-radius: 25px;
+ }
+ #match-events::-webkit-scrollbar-thumb
+ {
+     background-color: darkgrey;
+     outline: none;
+     border-radius: 25px;
+ }
+ #nav-top-two::-webkit-scrollbar
+ {
+   height: 2px;
+   position: relative; 
+   top: 15px;
+   border-radius: 25px;
+ }
+ #nav-top-two::-webkit-scrollbar-thumb
+ {
+     background-color: darkgrey;
+     outline: none;
+     border-radius: 25px;
+ }
+ .nav-top::-webkit-scrollbar
+ {
+   height: 3px;
+   position: relative; 
+   top: 15px;
+ }
+ .nav-top::-webkit-scrollbar-thumb
+ {
+     background-color: transparent;
+     outline: none;
+ }
+ #slip-events::-webkit-scrollbar-thumb
+ {
+      background-color: transparent;
+     outline: none;  
+ }
+ #slip-events::-webkit-scrollbar{
+      width: 2px; 
+ }
+ .stats-list::-webkit-scrollbar-thumb
+ {
+      background-color: transparent;
+     outline: none; 
+      
+ }
+ .stats-list::-webkit-scrollbar{
+      width: 2px; 
+ }
+ body::-webkit-scrollbar{
+     width: 2px;
+    }
+ body::-webkit-scrollbar-thumb{
+     background-color: transparent;
+     outline: none;
+     }
+ .menu-tow::-webkit-scrollbar
+ {
+   height: 3px;
+   position: relative; 
+   top: 15px;
+ }
+ .menu-tow::-webkit-scrollbar-thumb
+ {
+     background-color: transparent;
+     outline: none;
+ }
+ #last-section::-webkit-scrollbar
+ {
+   width: 2px;  
+ }
+ #last-section::-webkit-scrollbar-thumb
+ {
+     background-color: transparent;
+     outline: none;
+ }
+ #mid-section::-webkit-scrollbar
+ {
+    width: 2px;
+ }
+ #mid-section::-webkit-scrollbar-thumb
+ {
+     background-color: transparent;
+     outline: none; 
+ }
+ #matches-container::-webkit-scrollbar
+ {
+    width: 2px;
+ }
+ #matches-container::-webkit-scrollbar-thumb
+ {
+     background-color: transparent;
+     outline: none; 
+ }
+ .slip-list::-webkit-scrollbar{
+     width: 2px;
+ }
+ .slip-list::-webkit-scrollbar-thumb{
+     background-color: transparent;
+     outline: none;
+ }
+ #first-sec-list::-webkit-scrollbar
+ {
+    width: 2px;
+ }
+ #first-sec-list::-webkit-scrollbar-thumb
+ {
+     background-color: transparent;
+     outline: none; 
+ }
+ .event-list-history::-webkit-scrollbar{
+     width: 2px;
+ }
+ .event-list-history::-webkit-scrollbar-thumb{
+     background-color: transparent;
+     outline: none;
+ }
+ /* scroll bar ends here */
+ 
+  /* other designs start */
+  .margin-zero{
+    margin: 0px;
+}
+.display-none{
+    display: none;
+}
+.icon-rotate{
+   transform: translate(180deg);
+   transition: all ease-out 0.3s;
+}
+.card{
+    border: none;
+}
+.border-none{
+    border: none;
+}
+.stats-area{
+  background: rgba(0, 0, 0, 0.1);
+}
+#nav{
+   border-radius: 10px 10px 0px 0px;
+}
+.icon-button:hover {
+  cursor: pointer;
+}
+/*other designs ends */
+ 
+ /* Responsive design goes here */
+ 
+ @media screen and (max-width: 550px)
+ {
+     #first-section{
+         display: none;
+     }
+     #last-section{
+         display: none;
+     }
+ }
+
+ @media screen and (min-width: 600px)
+ {
+     .nav-sm{
+         display: none;
+     }
+ }
+@media screen and (max-width: 600px)
+{
+    .nav-lg{
+        display: none;
+    }
+}
+/* Responsive footer goes here */
+@media screen and (max-width: 600px) {
+    .app-large{
+        display: none;
+    }
+}
+@media screen and (min-width: 600px)
+{
+    .app-sm{
+        display: none;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    #mid-section{
+       max-height: 800px;
+    }
+}

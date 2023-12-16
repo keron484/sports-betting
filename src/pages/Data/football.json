@@ -1,0 +1,273 @@
+{
+    "Livedata":[
+        
+    { 
+        "id": "1ASDLAHSDALKSHDAS",
+        "Eventtitle": "Primier League",
+        "htname": "Liverpool",
+        "htlogo": "/image/liverpool.jpg",
+        "atlogo": "/image/man_city.png",
+        "link": "/match-details-live",
+        "htscore": "2",
+        "atscore": "1",
+        "awname": "Manchester city",
+        "timelable": "1-half",
+        "matchtime": "37:45",
+        "scoreshalf": "(2-1)",
+        "liveodds":[
+            {
+                "id":"237XXX",
+                "market_lable":"W1",
+                "odd": "1.98",
+                "match_name":"Liverpool VS Manchester city",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"237XXX",
+                "market_lable":"X",
+                "odd": "5.66",
+                "match_name":"Liverpool VS Manchester city",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"237XXX",
+                "market_lable":"W2",
+                "odd": "8.34",
+                "match_name":"Liverpool VS Manchester city",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            }
+        ]
+        
+        
+    },
+    {
+        "id": "2HFASLDKAHSDLAKSD",
+        "Eventtitle": "Primier League",
+        "htname": "Fulham",
+        "link": "/match-details-live",
+        "htlogo": "/image/fulham.png",
+        "atlogo": "/image/burnley.png",
+        "htscore": "3",
+        "atscore": "2",
+        "awname": "Burnley",
+        "timelable": "2-half",
+        "matchtime": "73:04",
+        "scoreshalf": "(2-0, 1-2)",
+        "liveodds":[
+            {
+                "id":"238472893749",
+                "market_lable":"W1",
+                "odd":"2.04",
+                "match_name":"Fulham VS Burnley",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"238472893749",
+                "market_lable":"X",
+                "odd": "4.00",
+                "match_name":"Fulham VS Burnley",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"238472893749",
+                "market_lable":"W2",
+                "odd": "3.57",
+                "match_name":"Fulham VS Burnley",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            }
+        ]
+    },
+    {   
+        "id": "3XZMBCZXNCBZXMCB",
+        "Eventtitle": "Primier League",
+        "htname": "Manchester United",
+        "htlogo": "/image/man_utd.png",
+        "link": "/match-details-live",
+        "atlogo": "/image/crystal_palace.png",
+        "htscore": "4",
+        "atscore": "1",
+        "awname": "Crystal Palace",
+        "timelable": "2-half",
+        "matchtime": "85:18",
+        "scoreshalf": "(3-0, 1-1)",
+        "liveodds":[
+            {
+                "id":"1231ASDKJAHKASDA",
+                "market_lable":"W1",
+                "odd": "1.05",
+                "match_name":"Manchester United VS Crystal Palace",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"25345ASDLASDANSL",
+                "market_lable":"X",
+                "odd": "4.00",
+                "match_name":"Manchester United VS Crystal Palace",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"30789ASKLDJNCALSK",
+                "market_lable":"W2",
+                "odd": "21.2",
+                "match_name":"Manchester United VS Crystal Palace",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"  
+            }
+        ]
+      
+    },
+    {   
+        "id": "3XZMBCZXWEUIR1283",
+        "Eventtitle": "Primier League",
+        "htname": "Bayern Munich",
+        "htlogo": "/image/bayern.png",
+        "link": "/match-details-live",
+        "atlogo": "/image/leipzig.png",
+        "htscore": "0",
+        "atscore": "2",
+        "awname": "Liepzig",
+        "timelable": "1-half",
+        "matchtime": "25:18",
+        "scoreshalf": "(0-2)",
+        "liveodds":[
+            {
+                "id":"1231AASDJKQ2289A",
+                "market_lable":"W1",
+                "odd": "3.34",
+                "match_name":"Bayern Munich VS Liepzig",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"25345ASAS24389NSL",
+                "market_lable":"X",
+                "odd": "4.00",
+                "match_name":"Bayern Munich VS Liepzig",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"30783429ASDDJNCAL",
+                "market_lable":"W2",
+                "odd": "1.58",
+                "match_name":"Bayern Munich VS Liepzig",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"  
+            }
+        ]
+      
+    },
+    {   
+        "id": "ASDAJSDHAKJ3284972398JASK",
+        "Eventtitle": "Bundes Liga",
+        "htname": "Borussia Dortmund",
+        "htlogo": "/image/dortmund.png",
+        "link": "/match-details-live",
+        "atlogo": "/image/bayer_levakuseen.png",
+        "htscore": "1",
+        "atscore": "0",
+        "awname": "Bayer Leevakuseen",
+        "timelable": "1-half",
+        "matchtime": "25:18",
+        "scoreshalf": "(1-0)",
+        "liveodds":[
+            {
+                "id":"121892379sdflaisdgfjkasdDSKLJAKSLDA",
+                "market_lable":"W1",
+                "odd": "1.34",
+                "match_name":"Borussia Dormund VS Bayer Levakuseen",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"121892379sdflaisdgfjkasdDSKLJAKSLDA",
+                "market_lable":"X",
+                "odd": "4.00",
+                "match_name":"Borussia Dormund VS Bayer Levakuseen",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"121892379sdflaisdgfjkasdDSKLJAKSLDA",
+                "market_lable":"W2",
+                "odd": "5.58",
+                "match_name":"Borussia Dormund VS Bayer Levakuseen",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"  
+            }
+        ]
+      
+    },
+    {   
+        "id": "ASDAJ237894ASJFASLDFHSDJKAF",
+        "Eventtitle": "Serie A",
+        "htname": "Inter Milan",
+        "htlogo": "/image/inter_milan.png",
+        "link": "/match-details-live",
+        "atlogo": "/image/napoli.png",
+        "htscore": "2",
+        "atscore": "0",
+        "awname": "Napoli",
+        "timelable": "2-half",
+        "matchtime": "68:18",
+        "scoreshalf": "(1-0,1-0)",
+        "liveodds":[
+            {
+                "id":"1WQOEQASJKDsdDSKLJAKSLDA",
+                "market_lable":"W1",
+                "odd": "1.23",
+                "match_name":"Inter Milan VS Napoli",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"1WQOEQASJKDsdDSKLJAKSLDA",
+                "market_lable":"X",
+                "odd": "6.04",
+                "match_name":"Inter Milan VS Napoli",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"1WQOEQASJKDsdDSKLJAKSLDA",
+                "market_lable":"W2",
+                "odd": "7.89",
+                "match_name":"Inter Milan VS Napoli",
+                "match_date":"04 Nov 2023",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"  
+            }
+        ]
+      
+    }
+
+
+    
+]
+    
+}

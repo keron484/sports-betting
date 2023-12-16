@@ -1,0 +1,602 @@
+{
+    "premier_league":[
+        {
+            "id":"ST044JUJWPMasdas",
+            "Eventtitle":"premier_league",
+            "htname": "Arsenal",
+            "htlogo": "/image/arsenal.png",
+            "atlogo": "/image/wolves.png",
+            "link": "/match-details",
+            "awname": "Wolves",
+            "market_1x2":[
+                {
+                   
+                    "id":"1234023ESLADJSADA",
+                    "market_lable":"W1",
+                    "odd": "1.28",
+                    "match_name":"Arsenal VS Wolves",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    
+                    "id":"2239408239nklASDKA",
+                    "market_lable":"X",
+                    "odd": "5.50",
+                    "match_name":"Arsenal VS Wolves",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                   
+                    "id":"32893749234LASDKAJS",
+                    "market_lable":"W2",
+                    "odd": "10.00",
+                    "match_name":"Arsenal VS Wolves",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                }
+             ]
+
+          },
+          {
+            "id":"ST044JLHAJKSHDASKDJHQW09234823",
+            "Eventtitle": "premier_league",
+            "htname": "Brentford",
+            "htlogo": "/image/brentford.png",
+            "atlogo": "/image/luton.png",
+            "link": "/match-details",
+            "awname": "Luton",
+            "market_1x2":[
+                {
+                   
+                    "id":"1234023ESLADJSADA",
+                    "market_lable":"W1",
+                    "odd": "1.45",
+                    "match_name":"Brentford VS Luton",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    
+                    "id":"2239408239nklASDKA",
+                    "market_lable":"X",
+                    "odd": "4.50",
+                    "match_name":"Brentford VS Luton",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                   
+                    "id":"32893749234LASDKAJS",
+                    "market_lable":"W2",
+                    "odd": "6.50",
+                    "match_name":"Brentford VS Luton",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                }
+             ]
+
+          },
+          {
+            "id":"ST044JUAKSJDAKJSHDJASHDJ",
+            "Eventtitle": "premier_league",
+            "htname": "Burnley",
+            "htlogo": "/image/burnley.png",
+            "atlogo": "/image/sheffield.png",
+            "link": "/match-details",
+            "awname": "Sheffield United",
+            "market_1x2":[
+                {
+                   
+                    "id":"1234023ESLADJSADA",
+                    "market_lable":"W1",
+                    "odd": "1.80",
+                    "match_name":"Burnley VS Sheffield United",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    
+                    "id":"2239408239nklASDKA",
+                    "market_lable":"X",
+                    "odd": "3.60",
+                    "match_name":"Burnley VS Sheffield United",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                   
+                    "id":"32893749234LASDKAJS",
+                    "market_lable":"W2",
+                    "odd": "4.50",
+                    "match_name":"Burnley VS Sheffield United",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                }
+             ]
+
+          },
+          {
+            "id":"ST0AASIOWERQOWIEQ3098493",
+            "Eventtitle": "premier_league",
+            "htname": "Nottingham Forest",
+            "htlogo": "/image/burnley.png",
+            "atlogo": "/image/everton.png",
+            "link": "/match-details",
+            "awname": "Everton",
+            "market_1x2":[
+                {
+                   
+                    "id":"1234023ESLADJSADA",
+                    "market_lable":"W1",
+                    "odd": "2.75",
+                    "match_name":"Nottingham Forest VS Everton",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    
+                    "id":"2239408239nklASDKA",
+                    "market_lable":"X",
+                    "odd": "3.25",
+                    "match_name":"Nottingham Forest VS Everton",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                   
+                    "id":"32893749234LASDKAJS",
+                    "market_lable":"W2",
+                    "odd": "2.60",
+                    "match_name":"Nottingham Forest VS Everton",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                }
+             ]
+
+          },
+          {
+            "id":"ST04AsajkdaDAJHADSJK30892",
+            "Eventtitle": "premier_league",
+            "htname": "Newcastle united",
+            "htlogo": "/image/newcastle.png",
+            "atlogo": "/image/man_utd.png",
+            "link": "/match-details",
+            "awname": "Manchester united",
+            "market_1x2":[
+                {
+                   
+                    "id":"1234023ESLADJSADA",
+                    "market_lable":"W1",
+                    "odd": "1.80",
+                    "match_name":"Newcastle united VS Manchester united",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    
+                    "id":"2239408239nklASDKA",
+                    "market_lable":"X",
+                    "odd": "3.60",
+                    "match_name":"Newcastle united VS Manchester united",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                   
+                    "id":"32893749234LASDKAJS",
+                    "market_lable":"W2",
+                    "odd": "4.50",
+                    "match_name":"Newcastle united VS Manchester united",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                }
+             ]
+
+          },
+          {
+            "id":"STASHDASODHASJD3298723ASD",
+            "Eventtitle": "premier_league",
+            "htname": "Bournemouth",
+            "htlogo": "/image/b_mouth.png",
+            "atlogo": "/image/aston_villa.png",
+            "link": "/match-details",
+            "awname": "Aston Villa",
+            "market_1x2":[
+                {
+                   
+                    "id":"1234023ESLADJSADA",
+                    "market_lable":"W1",
+                    "odd": "3.40",
+                    "match_name":"Bournemouth VS Aston Villa",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    
+                    "id":"2239408239nklASDKA",
+                    "market_lable":"X",
+                    "odd": "4.00",
+                    "match_name":"Bournemouth VS Aston Villa",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                   
+                    "id":"32893749234LASDKAJS",
+                    "market_lable":"W2",
+                    "odd": "1.95",
+                    "match_name":"Bournemouth VS Aston Villa",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                }
+             ]
+
+          },
+          {
+            "id":"STASHDAKSDH2093ashdajksjh",
+            "Eventtitle": "premier_league",
+            "htname": "Chelsea",
+            "htlogo": "/image/chelsea.png",
+            "atlogo": "/image/brighton.png",
+            "link": "/match-details",
+            "awname": "Brighton",
+            "market_1x2":[
+                {
+                   
+                    "id":"1234023ESLADJSADA",
+                    "market_lable":"W1",
+                    "odd": "1.72",
+                    "match_name":"Chelsea VS Brighton",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    
+                    "id":"2239408239nklASDKA",
+                    "market_lable":"X",
+                    "odd": "4.33",
+                    "match_name":"Chelsea VS Brighton",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                   
+                    "id":"32893749234LASDKAJS",
+                    "market_lable":"W2",
+                    "odd": "4.00",
+                    "match_name":"Chelsea VS Brighton",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                }
+             ]
+
+          },
+          {
+            "id":"ST0ashdakshdASIOADOAISHD",
+            "Eventtitle": "premier_league",
+            "htname": "Liverpool",
+            "htlogo": "/image/liverpool.jpg",
+            "atlogo": "/image/fulham.png",
+            "link": "/match-details",
+            "awname": "Fulham",
+            "market_1x2":[
+                {
+                   
+                    "id":"1234023ESLADJSADA",
+                    "market_lable":"W1",
+                    "odd": "1.25",
+                    "match_name":"Liverpool VS Fulham",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    
+                    "id":"2239408239nklASDKA",
+                    "market_lable":"X",
+                    "odd": "6.50",
+                    "match_name":"Liverpool VS Fulham",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                   
+                    "id":"32893749234LASDKAJS",
+                    "market_lable":"W2",
+                    "odd": "9.00",
+                    "match_name":"Liverpool VS Fulham",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                }
+             ]
+
+          },
+          {
+            "id":"STALSDHASD2938ASDHASJHKLD",
+            "Eventtitle": "premier_league",
+            "htname": "West Ham",
+            "htlogo": "/image/west_ham.png",
+            "atlogo": "/image/crystal_palace.png",
+            "link": "/match-details",
+            "awname": "Crystal Palace",
+            "market_1x2":[
+                {
+                   
+                    "id":"1234023ESLADJSADA",
+                    "market_lable":"W1",
+                    "odd": "1.25",
+                    "match_name":"Liverpool VS Fulham",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    
+                    "id":"2239408239nklASDKA",
+                    "market_lable":"X",
+                    "odd": "6.50",
+                    "match_name":"Liverpool VS Fulham",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                   
+                    "id":"32893749234LASDKAJS",
+                    "market_lable":"W2",
+                    "odd": "9.00",
+                    "match_name":"Liverpool VS Fulham",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                }
+             ]
+
+          },
+          {
+            "id":"ST019ASDBVNLSDVS23048923",
+            "Eventtitle": "premier_league",
+            "htname": "Manchester city",
+            "htlogo": "/image/man_city.png",
+            "atlogo": "/image/tottenham.png",
+            "link": "/match-details",
+            "awname": "Tottenham",
+            "market_1x2":[
+                {
+                   
+                    "id":"1234023ESLADJSADA",
+                    "market_lable":"W1",
+                    "odd": "1.28",
+                    "match_name":"Manchester city VS Tottenham",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    
+                    "id":"2239408239nklASDKA",
+                    "market_lable":"X",
+                    "odd": "6.00",
+                    "match_name":"Manchester city VS Tottenham",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                   
+                    "id":"32893749234LASDKAJS",
+                    "market_lable":"W2",
+                    "odd": "9.00",
+                    "match_name":"Manchester city VS Tottenham",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                }
+             ]
+
+          }
+    ],
+    "bundes_liga":[
+        {
+            "id":"ST044JUJWPMasdas",
+            "Eventtitle": "premier_league",
+            "htname": "Tottenham Hotspur",
+            "htlogo": "/image/luton.png",
+            "atlogo": "/image/kayserispor.png",
+            "link": "/match-details",
+            "awname": "Sheffield United",
+            "market_1x2":[
+                {
+                   
+                    "id":"1234023ESLADJSADA",
+                    "market_lable":"W1",
+                    "odd": "1.56",
+                    "match_name":"Tottenham Hotspur VS Sheffield United",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    
+                    "id":"2239408239nklASDKA",
+                    "market_lable":"X",
+                    "odd": "6.05",
+                    "match_name":"Tottenham Hotspur VS Sheffield United",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                   
+                    "id":"32893749234LASDKAJS",
+                    "market_lable":"W2",
+                    "odd": "7.99",
+                    "match_name":"Tottenham Hotspur VS Sheffield United",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                }
+             ]
+
+          }
+    ],
+    "premier_league_live":[
+        { 
+            "id": "1ASDLAHSDALKSHDAS",
+            "Eventtitle": "Primier League",
+            "htname": "Liverpool",
+            "htlogo": "/image/liverpool.jpg",
+            "atlogo": "/image/man_city.png",
+            "link": "/match-details-live",
+            "htscore": "2",
+            "atscore": "1",
+            "awname": "Manchester city",
+            "timelable": "1-half",
+            "matchtime": "37:45",
+            "scoreshalf": "(2-1)",
+            "liveodds":[
+                {
+                    "id":"237XXX",
+                    "market_lable":"W1",
+                    "odd": "1.98",
+                    "match_name":"Liverpool VS Manchester city",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    "id":"237XXX",
+                    "market_lable":"X",
+                    "odd": "5.66",
+                    "match_name":"Liverpool VS Manchester city",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    "id":"237XXX",
+                    "market_lable":"W2",
+                    "odd": "8.34",
+                    "match_name":"Liverpool VS Manchester city",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                }
+            ]
+            
+            
+        },
+        {
+            "id": "2HFASLDKAHSDLAKSD",
+            "Eventtitle": "Primier League",
+            "htname": "Fulham",
+            "link": "/match-details-live",
+            "htlogo": "/image/fulham.png",
+            "atlogo": "/image/burnley.png",
+            "htscore": "3",
+            "atscore": "2",
+            "awname": "Burnley",
+            "timelable": "2-half",
+            "matchtime": "73:04",
+            "scoreshalf": "(2-0, 1-2)",
+            "liveodds":[
+                {
+                    "id":"238472893749",
+                    "market_lable":"W1",
+                    "odd":"2.04",
+                    "match_name":"Fulham VS Burnley",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    "id":"238472893749",
+                    "market_lable":"X",
+                    "odd": "4.00",
+                    "match_name":"Fulham VS Burnley",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    "id":"238472893749",
+                    "market_lable":"W2",
+                    "odd": "3.57",
+                    "match_name":"Fulham VS Burnley",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                }
+            ]
+        },
+        {   
+            "id": "3XZMBCZXNCBZXMCB",
+            "Eventtitle": "Primier League",
+            "htname": "Manchester United",
+            "htlogo": "/image/man_utd.png",
+            "link": "/match-details-live",
+            "atlogo": "/image/crystal_palace.png",
+            "htscore": "4",
+            "atscore": "1",
+            "awname": "Crystal Palace",
+            "timelable": "2-half",
+            "matchtime": "85:18",
+            "scoreshalf": "(3-0, 1-1)",
+            "liveodds":[
+                {
+                    "id":"1231ASDKJAHKASDA",
+                    "market_lable":"W1",
+                    "odd": "1.05",
+                    "match_name":"Manchester United VS Crystal Palace",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    "id":"25345ASDLASDANSL",
+                    "market_lable":"X",
+                    "odd": "4.00",
+                    "match_name":"Manchester United VS Crystal Palace",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"
+                },
+                {
+                    "id":"30789ASKLDJNCALSK",
+                    "market_lable":"W2",
+                    "odd": "21.2",
+                    "match_name":"Manchester United VS Crystal Palace",
+                    "match_date":"04 Nov 2023",
+                    "kick_off_time":"12:00",
+                    "market_category":"1X2"  
+                }
+            ]
+          
+        }
+    ]
+}

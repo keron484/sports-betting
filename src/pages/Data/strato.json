@@ -1,0 +1,75 @@
+{
+    "championships":[
+        {
+            "id":"1ALKDJASDJASDJAS",
+            "link":"",
+            "title":"England",
+            "flag":"image/flags/flag-england.svg",
+            "leagues":[
+                
+                {
+                    "id":"4VBKSDFJSDKJFSDL",
+                    "lable":"Premier League",
+                    "Eventtitle":"premier_league",
+                    "link":"/pre-matches"
+                },
+                {
+                    "id":"4VBKSDFJSDKJFSDL",
+                    "lable":"Premier League two",
+                    "Eventtitle":"/pre-matches",
+                    "link":"/pre-matches"
+                },
+                {
+                    "id":"4VBKSDFJSDKJFSDL",
+                    "lable":"National League South",
+                    "Eventtitle":"/pre-matches",
+                    "link":"/pre-matches"
+                },
+                {
+                    "id":"4VBKSDFJSDKJFSDL",
+                    "lable":"FA Cup",
+                    "Eventtitle":"/pre-matches",
+                    "link":"/pre-matches"
+                }
+            ]
+    
+        }
+ 
+    ],
+    "championships_live":[
+        {
+            "id":"1ALKDJASDJASDJAS",
+            "link":"",
+            "title":"England",
+            "flag":"image/flags/flag-england.svg",
+            "leagues":[
+                
+                {
+                    "id":"4VBKSDFJSDKJFSDL",
+                    "lable":"Premier League",
+                    "Eventtitle":"premier_league_live",
+                    "link":"/live-events"
+                },
+                {
+                    "id":"4VBKSDFJSDKJFSDL",
+                    "lable":"Premier League two",
+                    "Eventtitle":"/pre-matches",
+                    "link":"/live-events"
+                },
+                {
+                    "id":"4VBKSDFJSDKJFSDL",
+                    "lable":"National League South",
+                    "Eventtitle":"/pre-matches",
+                    "link":"/live-events"
+                },
+                {
+                    "id":"4VBKSDFJSDKJFSDL",
+                    "lable":"FA Cup",
+                    "Eventtitle":"/pre-matches",
+                    "link":"/live-events"
+                }
+            ]
+    
+        }   
+    ]
+}
