@@ -1,12 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { slipActions } from "../Redux/slices/BetslipSlice";
-import { useState } from "react";
 function Marketitem(props) {
-    
     const betitems = useSelector((state) => state.betslip.selections);
     const parentId = props.parentId
-    var id = props.id;
+    const id = props.id;
     const match_date = props.match_date
     const match_name = props.match_name
     const market_category = props.market_category

@@ -257,7 +257,6 @@ body{
      color: var(--white-color);
      font-weight: 500;
      padding: 5px;
-     width: 4em;
      border-radius: 0;
  }
  .bet-btn{
@@ -512,6 +511,11 @@ body{
     overflow-y: scroll;
     height: auto;
     max-height: 500px;
+ }
+ #stake-amount, ::placeholder{
+    font-size: var(--font-size-15);
+    color: var(--main-color);
+    font-weight: bold;
  }
  /*container design ends */
  

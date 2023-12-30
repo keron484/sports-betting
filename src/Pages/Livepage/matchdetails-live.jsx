@@ -23,25 +23,25 @@ function Matchdetailslive() {
     return (
         <>
             <div>
-                <div className="card bg-info-st  sticky-top">
+                <div className="card bg-info-st  sticky-top pb-2">
                     <div className="d-flex justify-content-between align-items-center px-3 my-1">
-                        <div className="fs-4 fw-4 ">
+                        <div className="fs-5 fw-4 ">
                             <Link className="link" to='/live-events-list'><Icon icon="ic:round-arrow-back-ios"/></Link>
                         </div>
-                        <div className="fs-6 text-white fw-3 mt-2">England Primier League</div>
-                        <div className="fs-4  mb-1">
-                            <Icon icon="tabler:dots"/>
+                        <div className="fs-6 text-color fw-3 mt-1">England Primier League</div>
+                        <div className="fs-5  mb-1">
+                            <Icon icon="tabler:dots" />
                         </div>
                     </div>
                     <div className="card mt-1 py-2 stats-area mx-2 mb-3">
                         <NavLink className="link" to={`/livematch-stats`}>
                         <div className='d-flex justify-content-end mx-2'>
-                          <button className='badge-lg'><Icon icon="ion:arrow-forward"  className='fs-4 icon-color'/></button>
+                          <button className='badge-md'><Icon icon="ion:arrow-forward"  className='fs-12 icon-color'/></button>
                         </div>
                         </NavLink>
                     <div className="d-flex flex-row mt-1 justify-content-center align-items-center">
                             <div className="d-flex">
-                                <div className="fs-12 justify-content-start mt-4 mx-2 fw-3 text-white" id="home-team-name">{Livedata.htname}</div>
+                                <div className="fs-12 justify-content-start mt-4 mx-2 fw-4 " id="home-team-name">{Livedata.htname}</div>
                                 <div className="match-details-circle-one bg-t d-flex flex-row align-items-center justify-content-center">
                                     <div className="match-details-circle-two p-1 px-1 text-center  bg-t d-flex flex-row align-items-center justify-content-center">
                                         <img src={Livedata.htlogo} alt="hometeamname" className="team-logo"/>
@@ -51,7 +51,7 @@ function Matchdetailslive() {
                            <div>
                            </div>
                             <div className="d-block mx-2 text-center">
-                                <p className="fs-1 fw-bold margin-zero">
+                                <p className="fs-3 fw-bold margin-zero">
                                     <span className='text-color'>{Livedata.htscore}</span>
                                     <span className='mx-1'>:</span>
                                     <span className='text-color'>{Livedata.atscore}</span>
@@ -64,15 +64,21 @@ function Matchdetailslive() {
                                         <img src={Livedata.atlogo} alt="awayteamname" className="team-logo"/>
                                     </div>
                                 </div>
-                                <div className="fs-12 justify-content-end mt-4 mx-2 fw-3 text-white" id="home-team-name">{Livedata.awname}</div>
+                                <div className="fs-12 justify-content-end mt-4 mx-2 fw-3 " id="home-team-name">{Livedata.awname}</div>
                             </div>
                         </div>
-                        <div className='d-flex justify-content-center mt-2 mb-1'>
+                        <div className='d-flex justify-content-center  mb-1'>
                             <div className='d-block text-center'>
-                            <h1 className='fs-6 fw-bold text-color'>1-half, 45:56  (1-0)</h1>
+                            <h1 className='fs-12 fw-bold text-color'>1-half, 45:56  (1-0)</h1>
                             </div>
                         </div>
-                           <div className='px-2'>
+                    </div>
+                        <div className='px-2'>
+                          <div className='d-flex flex-row justify-content-between'>
+                          <p className="fs-12 margin-zero mx-2">{Livedata.htname}  </p>
+                            <p className="fs-12 margin-zero mx-2">Draw</p>
+                            <p className="fs-12 margin-zero mx-2">{Livedata.awname} 50%</p>
+                          </div>
                            <div className='w-100  bg-light result flex-row d-flex align-items-center'>
                                 <div className='d-flex justify-content-center align-items-center w-25 bg-warning h-100 home'>
                                     <p className='fs-7 mt-3 text-white'>Away 25 %</p>
@@ -85,7 +91,6 @@ function Matchdetailslive() {
                                 </div>
                             </div>
                            </div>
-                    </div>
 
                 </div>
                 <div className="card mt-3 py-1 my-2 sticky-top">

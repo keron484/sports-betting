@@ -72,8 +72,12 @@ function Bethistorylist()
     </div>
   </div>
   <div className="pb-xxl" id="mid-section">
-    {betItems.length < 1 && bonus_data ? <Player  src='https://lottie.host/e5e03007-daa7-4fce-94d4-e0fb5d3acca3/yRoSbdYPIS.json' loop autoplay speed={2} className="player" />  :  {betdata, betdata_bonus}}
-  
+    {betItems.length < 1 && bonus_data ? <Player  src='https://lottie.host/e5e03007-daa7-4fce-94d4-e0fb5d3acca3/yRoSbdYPIS.json'
+     loop 
+     autoplay 
+     speed={2} 
+     className="player" /> 
+      : betdata_bonus }
   </div>
 </div>
    

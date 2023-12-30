@@ -63,6 +63,7 @@ function Betslip()
            market_lable = {items.market_lable}
            odd = {items.odd}
            market_category = {items.market_category}
+           parentId = {items.parentId}
          />
         </>
       ))
@@ -77,8 +78,9 @@ function Betslip()
     <span><Icon icon="mdi:trash" className='fs-5 icon-color mx-1' onClick={removeall}/></span> </div>         
   </div>
     <div className="d-block mt-2 pb-sm " id="slip-events" style={styles}>
-    {rendered_selections}
-
+     
+        {rendered_selections}
+     
   </div>
   <div className="card mt-3 p-2">
 {!minimise && <div className='parent pos-fixed'>
@@ -106,11 +108,11 @@ function Betslip()
         value={stake}
        />
       <button 
-        className="btn btn-scondary bet mx-2 rounded-1"
+        className="btn btn-scondary bet mx-2 w-25 rounded-1"
         id="btn-bet"
         onClick={placebet}
         >
-          Bet
+         Place Bet
       </button>
     </div>
     <p className="fs-6 mt-1 margin-zero  fw-bold text-color">Range <span>1 ₣</span>- <span>500 000 ₣</span></p>

@@ -116,10 +116,10 @@ useEffect(() => {
                                        
                                             
                                             <Marketitem 
-                                               parentId = {items.id}
-                                               id={
-                                                    c.id
-                                                }
+                                            id={
+                                                c.id
+                                            }
+                                            parentId = {c.parentId}
                                                 match_name={
                                                     c.match_name
                                                 }

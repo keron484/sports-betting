@@ -13,10 +13,9 @@ const slipslice = createSlice({
         addTobetslip(state, action)
         {
            const newItems = action.payload;
-           const id = action.payload;
-           const existingItem = state.selections.find((items) => items.id === newItems.id);
-           if(existingItem){
-            selections.splice(itemIndex, 1);
+           const itemIndex = state.selections.findIndex((items) => items.parentId === newItems.parentId);
+           if(itemIndex >= 0){
+            state.selections.splice(itemIndex, 1);
             state.selections.push({
                parentId: newItems.parentId,
                id: newItems.id,
@@ -34,8 +33,9 @@ const slipslice = createSlice({
            
            }
            else{
-               state.selections.push({
+              state.selections.push({
                    id: newItems.id,
+                   parentId: newItems.parentId,
                    match_name: newItems.match_name,
                    market_lable: newItems.market_lable,
                    odd: newItems.odd,
@@ -45,7 +45,7 @@ const slipslice = createSlice({
                    awname:newItems.awname,
                    atlogo:newItems.atlogo,
                    htname:newItems.htname,                  
-                   htlogo:newItems.htlogo
+                   htlogo:newItems.htlogo,
                })
                state.num_events++;
                if(newItems.odd >= 1.40 && state.num_events <= 5)
