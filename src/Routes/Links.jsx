@@ -1,46 +1,48 @@
 import React from 'react-dom'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Betslip from '../pages/bet-slip';
-import Firstsection from '../pages/first-section';
-import Lastsection from '../pages/last-section';
-import Useraccount from '../pages/user-account';
-import Eventslive from '../pages/sports-events-live';
-import Eventslivelist from '../pages/sports-events-live-list';
-import Matches from '../pages/matches';
-import Matchstats from '../pages/match-statistics';
-import Matchdetails from '../pages/match-details';
-import Bethistorydetails from '../pages/bet-history-details';
-import Promocode from '../pages/Promocode';
-import Layoutone from '../Layouts/Layoutone';
+import Betslip from '../Pages/Nonlivepages/bet-slip';
+import Firstsection from '../Pages/Nonlivepages/first-section';
+import Useraccount from '../Pages/Nonlivepages/user-account';
+import Eventslive from '../Pages/Livepage/sports-events-live';
+import Eventslivelist from '../Pages/Livepage/sports-events-live-list';
+import Matches from '../Pages/Nonlivepages/matches';
+import Matchstats from '../Pages/Nonlivepages/match-statistics';
+import Matchdetails from '../Pages/Nonlivepages/match-details';
+import Bethistorydetails from '../Pages/Nonlivepages/bet-history-details';
+import Promocode from '../Pages/Nonlivepages/Promocode';
+import Bethistorylist from '../Pages/Nonlivepages/Bet-history-list';
+import Deposite from '../Pages/Nonlivepages/deposite';
+import Messages from '../Pages/Nonlivepages/Messages';
+import { Matchstatisticsitemsawayteam, Matchstatshometeam } from '../components/Matchstats';
+import BonusAccount from '../Pages/Nonlivepages/BonusAccount';
+import Authentication from '../Login/authentication';
+import Signup from '../Login/Signup';
+import Changepassword from '../Login/change-password';
+import Passwordrecovery from '../Login/password-recovery';
+import Email from '../Login/Email';
 import Layouttwo from '../Layouts/Layouttwo';
-import Bethistorylist from '../pages/Bet-history-list';
-import Deposite from '../pages/deposite';
-import Messages from '../pages/Messages';
-import { Matchstatshometeam, Matchstatisticsitemsawayteam } from '../pages/components/Matchstats';
-import BonusAccount from '../pages/BonusAccount';
-import Login from '../pages/LoginCopmonents/Login';
-import Authentication from '../pages/LoginCopmonents/authentication';
-import Signup from '../pages/LoginCopmonents/Signup';
-import Changepassword from '../pages/LoginCopmonents/change-password';
-import Passwordrecovery from '../pages/LoginCopmonents/password-recovery';
-import Email from '../pages/LoginCopmonents/Email';
 import Layoutmobile from '../Layouts/Layoutmobile';
-import Secondsection from '../pages/second-section';
-import Matchdetailslive from '../pages/matchdetails-live';
-import { count } from '../pages/BetslipSlice';
+import Secondsection from '../Pages/Livepage/second-section';
+import Matchdetailslive from '../Pages/Livepage/matchdetails-live';
+import Customersupport from '../Pages/Nonlivepages/customerSupport';
+import Cashout from '../Pages/Nonlivepages/Cashout';
+import Promopage from '../Pages/Nonlivepages/Promo';
+import Bethistorybonus from '../Pages/Nonlivepages/Bet-history-details-bonus';
+import Recoverybymail from '../Login/Recovery-mail';
+import Orangedeposite from '../Pages/Nonlivepages/orange-deposite';
+import Login from '../Login/Login';
+import Mtndeposite from '../Pages/Nonlivepages/mtn-deposite';
+import Mybetsettings from '../Pages/Nonlivepages/Mybetsettings';
+import { count } from '../Redux/slices/BetslipSlice';
 import { useSelector } from "react-redux";
-import { Defaultbetslip } from '../pages/bet-slip';
-import Customersupport from '../pages/customerSupport';
-import Cashout from '../pages/Cashout';
-import Promopage from '../pages/Promo';
-import Bethistorybonus from '../pages/Bet-history-details-bonus';
-import Recoverybymail from '../pages/LoginCopmonents/Recovery-mail';
-import Orangedeposite from '../pages/orange-deposite';
-import Mtndeposite from '../pages/mtn-deposite';
-import Mybetsettings from '../pages/Mybetsettings';
+import { Defaultbetslip } from '../Pages/Nonlivepages/bet-slip';
+import { loggedin } from '../Redux/slices/AuthSlice';
+import Lastsection from '../Pages/Nonlivepages/last-section';
+import Livematchstats from '../Pages/Livepage/Livematchstats';
 function Links()
 {
    const number =  useSelector(count);
+   const loginStatus = useSelector(loggedin);
     return(
      <>
      <BrowserRouter>
@@ -54,25 +56,25 @@ function Links()
      <Route path='/recovery-email' element={<Recoverybymail></Recoverybymail>}></Route>
      </Routes>
      <Routes>
-       <Route element={<Layoutone />}>
-          <Route path='/' element={<Firstsection />}></Route>
+       <Route element={<Layouttwo />}>
+          <Route path='/' element={<Lastsection />}></Route>
+          <Route path='/livematch-stats' element={<Livematchstats />}></Route>
           <Route path='/first-section' element={<Firstsection />}></Route>  
+          <Route path='/menu' element={<Firstsection />}></Route>  
           <Route path='/my-account' element={<Useraccount />}></Route>  
           <Route path='/bet-history-details/:id' element={<Bethistorydetails />}></Route>
           <Route path='/bet-history-details-bonus/:id' element={<Bethistorybonus />}></Route>  
           <Route path='/bet-history-list' element={<Bethistorylist />}></Route>  
           <Route path='/bet-slip' element={number <= 0 ? <Defaultbetslip /> : <Betslip />}></Route>
           <Route path='/promocode' element={number <= 0 ? <Defaultbetslip /> : <Promocode />}></Route>  
-          <Route path='/account-deposite' element={<Deposite />}></Route>
+          <Route path={loginStatus ? '/account-deposite' : '/login'} element={<Deposite />}></Route>
           <Route path='/messages' element={<Messages />}></Route> 
           <Route path='/bonus-account' element={number <= 0 ? <Defaultbetslip /> : <BonusAccount />}></Route>
           <Route path='/customer-support' element={<Customersupport></Customersupport>}></Route> 
-          <Route path='/withdraw' element={<Cashout></Cashout>}></Route> 
+          <Route path={loginStatus ? '/withdraw' : '/login'} element={<Cashout></Cashout>}></Route> 
           <Route path='/promo' element={<Promopage></Promopage>}></Route>
-          <Route path='/orange-deposite' element={<Orangedeposite></Orangedeposite>}></Route>
-          <Route path='/mtn-deposite' element={<Mtndeposite></Mtndeposite>}></Route>
-       </Route>
-       <Route element={<Layouttwo />}>
+          <Route path={loginStatus ? '/orange-deposite' : '/login'} element={<Orangedeposite></Orangedeposite>}></Route>
+          <Route path={loginStatus ? '/mtn-deposite' : '/login'} element={<Mtndeposite></Mtndeposite>}></Route>
           <Route path='/match-details-live/:id' element={<Matchdetailslive></Matchdetailslive>}></Route>
           <Route path='/last-section' element={<Lastsection />}></Route>  
           <Route path='/pre-matches/:Eventtitle' element={<Matches />}></Route> 
@@ -97,7 +99,7 @@ function Links()
           <Route path='/bet-history-list' element={<Bethistorylist />}></Route>  
           <Route path='/bet-slip' element={number <= 0 ? <Defaultbetslip /> : <Betslip />}></Route>
           <Route path='/promocode' element={number <= 0 ? <Defaultbetslip /> : <Promocode />}></Route>  
-          <Route path='/account-deposite' element={<Deposite />}></Route>
+          <Route path={loginStatus ? '/account-deposite' : '/login'} element={<Deposite />}></Route>
           <Route path='/messages' element={<Messages />}></Route> 
           <Route path='/bonus-account' element={number <= 0 ? <Defaultbetslip /> : <BonusAccount />}></Route> 
           <Route path='/last-section' element={<Lastsection />}></Route>  
@@ -109,10 +111,10 @@ function Links()
           <Route path='/live-events/:Eventtitle' element={<Eventslive />}></Route>  
           <Route path='/live-events-list' element={<Eventslivelist/>}></Route>
           <Route path='/customer-support' element={<Customersupport></Customersupport>}></Route> 
-          <Route path='/withdraw' element={<Cashout></Cashout>}></Route> 
+          <Route path={loginStatus ? '/withdraw' : '/login'} element={<Cashout></Cashout>}></Route> 
           <Route path='/promo' element={<Promopage></Promopage>}></Route>
-          <Route path='/orange-deposite' element={<Orangedeposite></Orangedeposite>}></Route>
-          <Route path='/mtn-deposite' element={<Mtndeposite></Mtndeposite>}></Route>
+          <Route path={loginStatus ? '/orange-deposite' : '/login'} element={<Orangedeposite></Orangedeposite>}></Route>
+          <Route path={loginStatus ? '/mtn-deposite' : '/login'} element={<Mtndeposite></Mtndeposite>}></Route>
           <Route path='/mybets-setting/:id' element={<Mybetsettings></Mybetsettings>}></Route>
        </Route> 
      </Routes>

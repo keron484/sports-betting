@@ -1,9 +1,8 @@
-
-import Navbottomlarge from "../pages/Navbottomlarge";
+import Navbottomlarge from '../components/Navbottomlarge';
 import { Outlet } from 'react-router-dom';
-import Lastsection from '../pages/last-section';
-import Secondsection from "../pages/second-section";
-import Navbottom from "../pages/navbottom";
+import Lastsection from "../Pages/Nonlivepages/last-section";
+import Secondsection from "../Pages/Livepage/second-section";
+import Navbottom from "../components/navbottom";
 function Layoutmobile()
 {
     return(
@@ -15,7 +14,7 @@ function Layoutmobile()
         <h1
           className='flex-center logo  fw-bold fs-5 uppercase  mx-3 mb-2 mt-1'
         >
-          Strato Bet
+          STRATOBET
         </h1>
       </nav>
         <div className='container'>

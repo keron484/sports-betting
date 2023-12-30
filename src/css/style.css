@@ -313,7 +313,7 @@ body{
     text-decoration: none;
  }
  .team-logo{
-     width: 75%;
+     width: 70%;
      height: 75%;
  }
  .team-logo-sm{
@@ -345,17 +345,15 @@ body{
    width: 65px;
    height: 65px;
    border-radius: 50%;
-   background: #ccc;
-  
+   background-color: transparent;
+
 }
 .match-details-circle-two{
    width: 50px;
    height: 50px;
    border-radius: 50%;
-   background: var(--white-color);
-   position: relative;
-   left: 5px;
-   top: 5px;  
+    background-color: transparent;
+
 }
 #away-team-name{
     max-width: 5em;
@@ -368,6 +366,20 @@ body{
     width: auto;
     overflow-y: hidden;
     overflow-x: hidden;
+  }
+  .result{
+    height: 1em;
+    border-radius: 10px;
+  }
+  .home{
+    border-right: 5px solid #fff;
+    border-radius: 10px 0px 0px 10px;
+  }
+  .draw{
+    border-right: 5px solid #fff;
+  }
+  .away{
+    border-radius: 0px 10px 10px 0px;
   }
  /*match box design ends*/
  
@@ -515,6 +527,14 @@ body{
      overflow-x: auto;
      overflow-y: hidden;
      white-space: nowrap;
+ }
+ .player{
+    width: 300px;
+    height: 300px;
+ }
+ .player-sm{
+    width: 175px;
+    height: 175px;
  }
  .nav-top-list{
      border: none;

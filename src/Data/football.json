@@ -1,0 +1,52 @@
+{
+    "Livedata":[
+        
+    { 
+        "id": "1ASDLAHSDALKSHDAS",
+        "Eventtitle": "Primier League",
+        "htname": "Liverpool",
+        "htlogo": "/image/liverpool.jpg",
+        "atlogo": "/image/man_city.png",
+        "link": "/match-details-live",
+        "htscore": "2",
+        "atscore": "1",
+        "awname": "Manchester city",
+        "timelable": "1-half",
+        "matchtime": "37:45",
+        "scoreshalf": "(2-1)",
+        "liveodds":[
+            {
+                "id":"ST123",
+                "market_lable":"W1",
+                "odd": "1.98",
+                "match_name":"Liverpool VS Manchester city",
+                "match_date":"04 Nov 2045",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"ST234",
+                "market_lable":"X",
+                "odd": "5.66",
+                "match_name":"Liverpool VS Manchester city",
+                "match_date":"04 Nov 2045",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"ST456",
+                "market_lable":"W2",
+                "odd": "8.34",
+                "match_name":"Liverpool VS Manchester city",
+                "match_date":"04 Nov 2025",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            }
+        ]
+        
+        
+    }
+    
+]
+    
+}

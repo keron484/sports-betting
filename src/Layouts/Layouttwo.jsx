@@ -1,10 +1,10 @@
-import Navbottomlarge from '../pages/Navbottomlarge'
 import { Outlet } from 'react-router-dom'
-import Firstsection from '../pages/first-section'
-import Secondsection from '../pages/second-section'
-import Navbottom from '../pages/navbottom'
-
+import Navbottomlarge from '../components/Navbottomlarge'
+import Navbottom from '../components/navbottom'
+import Secondsection from '../Pages/Livepage/second-section'
+import Firstsection from '../Pages/Nonlivepages/first-section'
 function Layouttwo () {
+
   return (
     <>
     <div className='app-large'>
@@ -12,9 +12,9 @@ function Layouttwo () {
         className='navbar navbar-expand-lg bg-white sticky-top navbar-light py-2 mb-1 justify-content-center border-bottom shadow-sm'
         >
         <h1
-          className='flex-center logo  fw-bold fs-5 uppercase mx-3 mb-2 mt-1'
+          className='flex-center logo  fw-bold fs-5 capitalize mx-3 mb-2 mt-1'
         >
-          Strato Bet
+          STRATOBET
         </h1>
       </nav>
       <div className='container'>
@@ -38,9 +38,7 @@ function Layouttwo () {
         </div>
       </footer>
     </div>
-    <div id="toastBox">
 
- </div>
     </>
   )
 }
