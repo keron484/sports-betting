@@ -30,8 +30,8 @@ const slipslice = createSlice({
                htname:newItems.htname,
                htlogo:newItems.htlogo
            })
-           
-           }
+         }
+         
            else{
               state.selections.push({
                    id: newItems.id,

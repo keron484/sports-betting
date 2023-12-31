@@ -17,7 +17,7 @@ function Slipitems(props)
         <span className='float-end'><Icon icon="ph:x-circle-fill" className='fs-3 mx-1 icon-color' onClick={removeitem}/>
         </span>
         </h2>
-      <p className="fw-3 fs-12 mx-3 margin-zero">{props.match_date} , {props.kick_off_time} {props.parentId}</p>
+      <p className="fw-3 fs-12 mx-3 margin-zero">{props.match_date} , {props.kick_off_time}</p>
       <div className="card  px-3 bg-f9 text-color">
         <h2 className="fs-6 mt-1 mb-1 text-color"><span className="float-start mt-1 fw-bold">{props.market_category}: {props.market_lable}</span><span className=" float-end fw-bold">{props.odd}</span></h2>
       </div>
