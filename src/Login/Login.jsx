@@ -20,7 +20,7 @@ function Login()
           <p className="margin-zero fs-13 fw-3">Welcome back friend</p>
           </div>
           <div>
-           <NavLink className='link' to=''>
+           <NavLink className='link' to='/'>
            <Icon icon="ph:x-bold" className="fs-3 icon-color"/>
            </NavLink>
           </div>
@@ -52,25 +52,25 @@ function Login()
             </Link>
             <div className="d-flex flex-row justify-content-end">
               <div className="d-block">
-                <p className="fs-6  margin-zero text-end d-flex fw-3">Don't have an account? <Link className="link mx-1" to='/sign-up'><div className="fw-bold c-stbl dec-none">Register</div></Link> </p>
-                <p className="fs-6  margin-zero text-end text-break"><Link className="link" to='/sign-up'><div className="fw-bold c-stbl dec-none">Recover Password</div></Link></p>
-                <p className="fs-6  margin-zero text-end text-break"> <Link className="link" to='/change-password'><div className="fw-bold c-stbl dec-none">Update Password</div></Link> </p>
+                <p className="fs-12  margin-zero text-end d-flex fw-3">Don't have an account? <Link className="link mx-1" to='/sign-up'><div className="fw-bold c-stbl dec-none">Register</div></Link> </p>
+                <p className="fs-12 margin-zero text-end text-break"><Link className="link" to='/sign-up'><div className="fw-bold c-stbl dec-none">Recover Password</div></Link></p>
+                <p className="fs-12 margin-zero text-end text-break"> <Link className="link" to='/change-password'><div className="fw-bold c-stbl dec-none">Update Password</div></Link> </p>
               </div>
             </div>
             <h2 className="fs-6 fw-5 my-2 text-center">Or</h2>
             <div className="d-flex flex-row justify-content-center">
                   <button
-                    className='w-25 py-2 mb-2 btn btn-outline-primary rounded-3  fw-3 mx-1 text-center'
+                    className='w-25 py-2 mb-2 btn shadow rounded-3  fw-3 mx-1 text-center'
                   >
                     <Icon icon="flat-color-icons:google" className="fs-5" />
                   </button>
                   <button
-                    className='w-25 py-2 mb-2 btn btn-outline-primary rounded-3  fw-3 mx-1 text-center'
+                    className='w-25 py-2 mb-2 btn shadow rounded-3  fw-3 mx-1 text-center'
                   >
                     <Icon icon="simple-icons:facebook" className="fs-5 " />
                   </button>
                   <button
-                    className='w-25 py-2 mb-2 btn btn-outline-secondary rounded-3  fw-3 mx-1 text-center'
+                    className='w-25 py-2 mb-2 btn shadow rounded-3  fw-3 mx-1 text-center'
                   >
                      <Icon icon="logos:apple" className="fs-5 " />
                   </button>

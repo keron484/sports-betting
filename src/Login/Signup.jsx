@@ -41,7 +41,7 @@ function Signup () {
                 <p className="text-color margin-zero fw-3 text-color">Create your account</p>
                 </div>
                 <div>
-                   <NavLink className='link' to=''>
+                   <NavLink className='link' to='/'>
                    <Icon icon="ph:x-bold" className="fs-3 icon-color"/>
                   </NavLink>
                  </div>
@@ -97,7 +97,7 @@ function Signup () {
                  </div>
                   <div className='form-check flex-row align-items-center d-flex'>
                     <input
-                      className='form-check-input p-2 border-danger'
+                      className='form-check-input p-2 border-success'
                       type='checkbox'
                       defaultValue
                       id='flexCheckDefault'
@@ -105,8 +105,8 @@ function Signup () {
                     />
                     <div>
                     <label
-                      className='form-check-label fs-13 fw-3 lh-0 text-color mx-1' htmlFor='flexCheckDefault'>
-                        I have read and i agree with
+                      className='form-check-label fs-12 fw-3 lh-0 text-color mx-1' htmlFor='flexCheckDefault'>
+                        I have read and i agree with Terms 
                     </label>
                     </div>
                   </div>
@@ -119,14 +119,14 @@ function Signup () {
                   </button>
                   <div className='d-flex flex-row justify-content-end'>
                     <div className='d-block'>
-                      <p className=' py-1 margin-zero fw-4 text-break d-flex'>
+                      <p className=' py-1 fs-12 margin-zero fw-4 text-break d-flex'>
                         Already Have an account?
-                          <Link to='/login' className="link mx-2"><div className='fw-bold fs-6 c-stbl dec-none'>
+                          <Link to='/login' className="link mx-2"><div className='fw-bold fs-12 c-stbl dec-none'>
                           Login
                         </div></Link>   
                       </p>
                       <p className=' margin-zero fw-4 text-end '>
-                         <Link to='/password-recovery' className="link"><div className='fw-bold fs-6 c-stbl dec-none'>
+                         <Link to='/password-recovery' className="link"><div className='fw-bold fs-12 c-stbl dec-none'>
                           Password recovery
                         </div></Link> 
                       </p>
@@ -135,17 +135,17 @@ function Signup () {
                   <h2 className='fs-12 fw-5 my-2 text-center'>Or</h2>
                   <div className="d-flex flex-row justify-content-center">
                   <button
-                    className='w-25 py-2 mb-2 btn btn-outline-primary rounded-3  fw-3 mx-1 text-center'
+                    className='w-25 py-2 mb-2 btn shadow rounded-3  fw-3 mx-1 text-center'
                   >
-                    <Icon icon="flat-color-icons:google" className="fs-5" />
+                    <Icon icon="flat-color-icons:google" className="fs-5 c-stbl" />
                   </button>
                   <button
-                    className='w-25 py-2 mb-2 btn btn-outline-primary rounded-3  fw-3 mx-1 text-center'
+                    className='w-25 py-2 mb-2 btn shadow rounded-3  fw-3 mx-1 text-center'
                   >
                     <Icon icon="simple-icons:facebook" className="fs-5 " />
                   </button>
                   <button
-                    className='w-25 py-2 mb-2 btn btn-outline-secondary rounded-3  fw-3 mx-1 text-center'
+                    className='w-25 py-2 mb-2 btn shadow rounded-3  fw-3 mx-1 text-center'
                   >
                      <Icon icon="logos:apple" className="fs-5 " />
                   </button>

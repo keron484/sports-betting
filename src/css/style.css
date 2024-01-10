@@ -67,11 +67,11 @@ body{
  .fs-7{
      font-size: var(--font-size-10);
    }
- .fs-6{
-     font-size: var(--font-size-12);
- }
  .fs-12{
      font-size: var(--font-size-12);
+ }
+ .fs-13{
+    font-size: var(--font-size-13);
  }
  /* font size end */
  
@@ -155,7 +155,12 @@ body{
     position: relative;
     right: 25px;
  }
- 
+.mtn-box{
+    border-radius: 0px;
+}
+.mtn-logo{
+    height: 5rem;
+}
  /* moving elements to the right starts here */
  .right-1{
      position: relative;
@@ -314,10 +319,12 @@ body{
  .team-logo{
      width: 70%;
      height: 75%;
+     object-fit: contain;
  }
  .team-logo-sm{
     width: 20px;
     height: 20px;
+    object-fit: contain;
  }
  .scores-half{
    font-size: 10px;
@@ -336,9 +343,7 @@ body{
     height: 45px;
     border-radius: 50%;
     background: var(--white-color);
-    position: relative;
-    left: 5px;
-    top: 5px;
+   
 }
 .match-details-circle-one{
    width: 65px;
@@ -474,7 +479,7 @@ body{
   
  /*container design start */
  .container{
-     max-width: 1600px;
+     max-width: 1800px;
  }
  #matches-container{
     overflow-x: hidden;
@@ -594,6 +599,9 @@ body{
  .pd-sm{
     padding-bottom: 5em;
  }
+ .borderStart{
+    border-left: 2px solid var(--secondary-color);
+ }
  /* navbar two design ends */
  
  
@@ -624,9 +632,27 @@ body{
     height: auto;
     max-height: 8em; 
  }
+ #menu{
+    overflow-y: scroll;
+    height: auto;
+    max-height: 500px;
+ }
  /* section design ends */
 
  /* scroll bar starts */
+ #menu::-webkit-scrollbar
+ {
+   width:3px;
+   position: relative; 
+   top: 15px;
+   border-radius: 25px;
+ }
+ #menu::-webkit-scrollbar-thumb
+ {
+     background-color: darkgrey;
+     outline: none;
+     border-radius: 25px;
+ }
  #match-events::-webkit-scrollbar
  {
   width: 2px;
@@ -681,13 +707,7 @@ body{
  .stats-list::-webkit-scrollbar{
       width: 2px; 
  }
- body::-webkit-scrollbar{
-     width: 2px;
-    }
- body::-webkit-scrollbar-thumb{
-     background-color: transparent;
-     outline: none;
-     }
+
  .menu-tow::-webkit-scrollbar
  {
    height: 3px;
@@ -771,9 +791,7 @@ body{
 .stats-area{
   background: rgba(0, 0, 0, 0.1);
 }
-#nav{
-   border-radius: 10px 10px 0px 0px;
-}
+
 .icon-button:hover {
   cursor: pointer;
 }

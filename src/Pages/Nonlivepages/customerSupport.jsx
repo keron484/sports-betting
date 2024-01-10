@@ -9,15 +9,15 @@ function Customersupport()
       <span></span>
     </div>
     <div className="mt-4 mb-1">
-        <label htmlFor="userid" className="fs-6 fw-3 mx-2 text-color my-1">User ID</label>
-        <input type="text" className="form-control shadow-sm" placeholder="user id goes here"/>
+        <label htmlFor="userid" className="fs-6 fw-3 mx-2 text-color my-1">User Name</label>
+        <input type="text" className="form-control shadow-sm" placeholder="Enter username"/>
     </div>
     <div className="mt-2">
         <label htmlFor="Message" className="fs-6 fw-3 mx-2 text-color">Message</label>
         <textarea name="" className="form-control my-2 shadow-sm pb-5 rounded-2" placeholder="Write a Message"></textarea>
     </div>
     <div className="mt-3 d-flex justify-content-center px-1 ">
-      <button className="btn btn-lg fs-12 button-color text-white w-100">Send Message</button>
+      <button className="btn btn-lg fs-12 button-color text-white w-100" onClick={() => {alert("Your message has been sent for processing")}}>Send Message</button>
     </div>
     </>
   )

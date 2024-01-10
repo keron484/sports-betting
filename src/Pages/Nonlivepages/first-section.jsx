@@ -16,7 +16,7 @@ function Firstsection()
       <p></p>
     </div>
   </div>
-  <div className="d-block" id="mid-section">
+  <div className="d-block pb-xxl" id="menu">
 
   <NavLink to="/account-deposite" className="link">
       <div className="card px-1 py-2 mb-2 shadow-sm">
@@ -88,7 +88,7 @@ function Firstsection()
     </div>
    </NavLink>
 
-   <NavLink to="/messages" className="link shadow-sm">
+   <NavLink to="/virtual-games" className="link shadow-sm">
          <div className="card px-1 py-2 mb-2 shadow-sm">
       <div className="d-flex flex-row justify-content-start align-items-center">
         <div className="mx-1">
@@ -169,7 +169,21 @@ function Firstsection()
     </div>
    </NavLink>
    
-   
+   <NavLink to="/promo" className="link">
+      <div className="card px-1  py-2 mb-2 shadow-sm">
+      <div className="d-flex flex-row justify-content-start  align-items-center">
+        <div className="mx-1">
+          <button className="badge-lg"> 
+          <Icon icon="material-symbols:celebration-outline-rounded" className="fs-5 icon-color"/>
+           </button>
+        </div>
+        <div className="d-block mx-1 text-color">
+          <p className="fs-13 margin-zero fw-4">Withdraw</p>
+          <p className="fs-12 margin-zero fw-3">check promo code</p>
+        </div>
+      </div>
+    </div>
+   </NavLink>
   </div>
 </div>
 

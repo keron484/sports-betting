@@ -45,14 +45,15 @@ function BonusAccount()
       const rendered_selections = selected_events.map(items => (
         <>
          <Slipitems 
-           id={items.id}
-           match_name = {items.match_name}
-           match_time = {items.match_time}
-           match_date = {items.match_date}
-           kick_off_time = {items.kick_off_time}
-           market_lable = {items.market_lable}
-           odd = {items.odd}
-           market_category = {items.market_category}
+          id={items.id}
+          match_name = {items.match_name}
+          match_time = {items.match_time}
+          match_date = {items.match_date}
+          kick_off_time = {items.kick_off_time}
+          market_lable = {items.market_lable}
+          odd = {items.odd}
+          market_category = {items.market_category}
+          parentId = {items.parentId}
          />
         </>
       ))
@@ -76,8 +77,8 @@ function BonusAccount()
       <button className="badge-sm c-stbl top-3  bg-white " onClick={minmaxfunc}><Icon icon="ep:arrow-up-bold" className='c-stbl'/></button>
     </div>
     <div className="card p-1 bg-f9">
-      <h2 className="fs-6 text-color margin-zero py-2"><span className="float-start mt-1">Events</span><span className="p-1 float-end fw-bold" id="num_events"><Icon icon="bi:stack" className='fs-6 icon-color mx-2' />{num_events}</span></h2>
-      <h2 className="fs-6 text-color margin-zero py-2"><span className="float-start mt-1">Odds</span><span className="p-1 float-end fw-bold" id="odd_total">{totalOdds.toFixed(2)}</span></h2>                        
+      <h2 className="fs-13 text-color margin-zero py-2"><span className="float-start mt-1">Events</span><span className="p-1 float-end fw-bold" id="num_events"><Icon icon="bi:stack" className='fs-6 icon-color mx-2' />{num_events}</span></h2>
+      <h2 className="fs-13 text-color margin-zero py-2"><span className="float-start mt-1">Odds</span><span className="p-1 float-end fw-bold" id="odd_total">{totalOdds.toFixed(2)}</span></h2>                        
     </div>
     <div className="d-flex justify-content-between mt-1 p-1 rounded-1 bg-lav">
     <NavLink to='/bet-slip' className={({isActive}) => isActive ? "btn button-color fs-12 c-white" : "btn  fs-12 text-color"}> <div className="fs-12 "> <div className='bg-t fw-3 border-none '>Current Account</div> </div></NavLink>
@@ -89,21 +90,21 @@ function BonusAccount()
     <div className="input-group">
       <input 
         type="number" 
-        className="form-control form-control-sm"
+        className="form-control form-control-sm border-success"
         placeholder="Enter stake" 
         id="stake-amount"
         onChange={handlechange}
         value={stake}
        />
       <button 
-      className="btn btn-scondary bet mx-2 rounded-1" 
+      className="btn btn-scondary bet mx-2 w-25 fs-13 rounded-1" 
       id="btn-bet"
       onClick={place_bet} >
-        Bet
+        Place Bet
       </button>
     </div>
-    <p className="fs-12 mt-1 margin-zero  fw-bold">Range <span>90 ₣</span>- <span>9 00000 ₣</span></p>
-    <h2 className="fs-12 margin-zero py-2 fw-bold">Potential Winnings: <span className="float-end">{potential_wininings.toFixed(2)}<span> ₣  </span></span></h2> 
+    <p className="fs-13 mt-1 text-color margin-zero  fw-bold">Range <span>90 ₣</span>- <span>9 00000 ₣</span></p>
+    <h2 className="fs-13 text-color margin-zero py-2 fw-bold">Potential Winnings: <span className="float-end">{potential_wininings.toFixed(2)}<span> ₣  </span></span></h2> 
     <button className='btn button-color text-white fs-12 py-2 my-2 w-100'>Stake All</button>
 </div>}
 

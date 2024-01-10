@@ -1,6 +1,6 @@
 {
     "Livedata":[
-        
+             
     { 
         "id": "1ASDLAHSDALKSHDAS",
         "Eventtitle": "Primier League",
@@ -11,8 +11,6 @@
         "htscore": "2",
         "atscore": "1",
         "awname": "Bournmouth",
-        "timelable": "1-half",
-        "matchtime": "37:45",
         "scoreshalf": "(2-1)",
         "liveodds":[
             {
@@ -59,8 +57,6 @@
         "htscore": "5",
         "atscore": "0",
         "awname": "Bochum",
-        "timelable": "1-half",
-        "matchtime": "65:45",
         "scoreshalf": "(4-0, 1-0)",
         "liveodds":[
             {
@@ -96,8 +92,53 @@
         ]
         
         
+    },
+    { 
+        "id": "ADIWEO213ASJKDAS29723",
+        "Eventtitle": "Serie A",
+        "htname": "Inter Milan",
+        "htlogo": "/image/inter_milan.png",
+        "atlogo": "/image/fiorentina.png",
+        "link": "/match-details-live",
+        "htscore": "1",
+        "atscore": "0",
+        "awname": "Fiorentina",
+        "scoreshalf": "(1-0, 0-0)",
+        "liveodds":[
+            {
+                "id":"ASDHJASKDWEURO942309",
+                "parentId":"ADIWEO213ASJKDAS29723",
+                "market_lable":"W1",
+                "odd": "1.05",
+                "match_name":"Inter Milan VS Fiorentina",
+                "match_date":"04 Nov 2045",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"ST234SKQER0392SDLAKSJDAS",
+                "parentId":"ADIWEO213ASJKDAS29723",
+                "market_lable":"X",
+                "odd": "5.66",
+                "match_name":"Inter Milan VS Fiorentina",
+                "match_date":"04 Nov 2045",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            },
+            {
+                "id":"ST456320894SCJHKASJLASJD",
+                "parentId":"ADIWEO213ASJKDAS29723",
+                "market_lable":"W2",
+                "odd": "18.09",
+                "match_name":"Inter Milan VS Fiorentina",
+                "match_date":"04 Nov 2025",
+                "kick_off_time":"12:00",
+                "market_category":"1X2"
+            }
+        ]
+        
+        
     }
-    
-]
-    
+    ]
 }
+    

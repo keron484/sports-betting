@@ -6,20 +6,20 @@ function Navbottom(){
   const num_events = useSelector(count);
     return(
      <>
-      <nav className="navbar fixed-bottom navbar-expand-sm shadow-sm border-top  justify-content-between bg-white nav-sm px-3" style={{height: '4.5em'}} id='nav'>
+      <nav className="navbar fixed-bottom navbar-expand-sm shadow-sm border-top  justify-content-between bg-white nav-sm px-3" style={{height: '3.5em'}} id='nav'>
     <Link className='link' to="/second-section">
-    <div className="mb-3  fw-4 d-block text-center mt-1 primary-icon-color">
-    <Icon icon="fluent:fire-16-filled" className='fs-4'/>
-    <p className='fs-12 bottom-1'>Live</p>
+    <div className="  fw-4 d-block text-center  primary-icon-color">
+    <Icon icon="fluent:fire-16-filled" className='fs-5'/>
+    <p className='fs-12 '>Live</p>
   </div>
     </Link>
    <Link className='link' to="/last-section">
-   <div className="mb-3  fw-4 d-block text-center mt-1 primary-icon-color">
-   <Icon icon="solar:football-bold" className='fs-4'/>
-   <p className='fs-12 bottom-1'>Matches</p>
+   <div className="  fw-4 d-block text-center  primary-icon-color">
+   <Icon icon="solar:football-bold" className='fs-5'/>
+   <p className='fs-12 '>Matches</p>
   </div>
    </Link>
-  <div className="mb-3 d-block text-center top-2">
+  <div className=" d-block text-center top-5">
     <Link className='link' to="/bet-slip">
     <button type="button" className="icon-button">
     <Icon icon="ion:ticket" className='fs-4'/>
@@ -28,15 +28,15 @@ function Navbottom(){
     </Link>
   </div>
   <Link className='link' to="/bet-history-list">
-  <div className="mb-3  fw-4 d-block text-center mt-1 primary-icon-color">
-     <Icon icon="clarity:clock-solid" className='fs-4'/>
-     <p className='fs-12 bottom-1'>My bets</p>
+  <div className="  fw-4 d-block text-center  primary-icon-color">
+     <Icon icon="clarity:clock-solid" className='fs-5'/>
+     <p className='fs-12 '>My bets</p>
   </div>
   </Link>
   <Link className='link' to="/first-section">
-  <div className="mb-3  fw-4 d-block text-center mt-1 primary-icon-color">
-  <Icon icon="ep:menu" className='fs-4'/>
-  <p className='fs-12 bottom-1'>Menu</p>
+  <div className="  fw-4 d-block text-center  primary-icon-color">
+  <Icon icon="ep:menu" className='fs-5'/>
+  <p className='fs-12 '>Menu</p>
   </div>
   </Link>
 </nav>

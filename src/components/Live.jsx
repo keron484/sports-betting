@@ -3,23 +3,42 @@ import {Link} from "react-router-dom";
 import Marketitem from "./Marketitem";
 import { useState, useEffect } from "react";
 function Liveeventsitem() {
-const [Livedata, setLivedata] = useState([]);
-const getdata = () => {
-    var requestOptions = {
-        method:"GET",
-        redirect: "follow"
+    const [Livedata, setLivedata] = useState([]);
+    const getdata = () => {
+        var requestOptions = {
+            method:"GET",
+            redirect: "follow"
+        };
+        fetch(`http://localhost:3031/Livedata`, requestOptions)
+        .then((response) => response.json())
+        .then((result) => setLivedata(result))
+        .catch((error) => console.log("error", error));
+    }
+    useEffect(() => {
+        getdata(Livedata);
+    },)
+    const [seconds, setSeconds] = useState(0);
+  
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setSeconds(prevSeconds => (prevSeconds + 1) % 5400); // 5400 seconds = 90 minutes
+      }, 1000);
+      
+      return () => clearInterval(timer);
+    }, []);
+    
+    const formattedMinutes = Math.floor(seconds / 60).toString().padStart(2, '0');
+    const formattedSeconds = (seconds % 60).toString().padStart(2, '0');
+    const gradientStyle = {
+      background: 'linear-gradient(90deg, #095256, #439775)',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+      fontSize: '36px',
+      fontWeight: 'bold',
     };
-    fetch("http://localhost:3031/Livedata", requestOptions)
-    .then((response) => response.json())
-    .then((result) => setLivedata(result))
-    .catch((error) => console.log("error", error));
-}
-useEffect(() => {
-    getdata()
-}, [])
     return (
         <> {
-            Livedata.map((items, index) => {
+            Livedata.map((items) => {
                 return (
                     <>
                         <Link className="link"
@@ -41,12 +60,12 @@ useEffect(() => {
                                 <div className="d-flex flex-row  mt-3 justify-content-center align-items-center text-center">
                                     {/*block one start*/}
                                         <div className="d-block text-center">
-                                        <div className="home-team-circle-one">
-                                            <div className="home-team-circle-two p-1 px-1 text-center">
+                                        <div className="home-team-circle-one flex-row d-flex align-items-center justify-content-center">
+                                            <div className="home-team-circle-two flex-row d-flex align-items-center justify-content-center text-center">
                                                 <img src={
                                                         items.htlogo
                                                     }
-                                                    className="team-logo object-fit mt-1"
+                                                    className="team-logo object-fit "
                                                     alt={
                                                         items.htname
                                                     }/>
@@ -64,12 +83,12 @@ useEffect(() => {
                                     {/*block two start*/}
                                     <div className="mx-2 text-center">
                                         <h1 className="fw-bold fs-1 scores text-color">
-                                            <span>{
+                                            <span style={gradientStyle}>{
                                                 items.htscore
                                             }
                                                 <span>
-                                                    <span className="mx-1">:</span>
-                                                    <span className="margin-one">
+                                                    <span className="mx-1" style={gradientStyle}>:</span>
+                                                    <span className="margin-one" style={gradientStyle}>
                                                         {
                                                         items.atscore
                                                     }</span>
@@ -78,18 +97,17 @@ useEffect(() => {
                                         </h1>
                                         <span className="mx-1 fs-12 fw-bold">
                                         <span className="mx-1">{
-                                            items.timelable
+                                            formattedMinutes < 45 ? "1-half" : "2-half"
                                         },</span>
-                                            {
-                                            items.matchtime
-                                        }</span>
+                                           {formattedMinutes}:{formattedSeconds}
+                                           </span>
                                     </div>
                                     {/*block two end */}
 
                                     {/*block three start */}
                                     <div className="d-block text-center">
-                                        <div className="home-team-circle-one">
-                                            <div className="home-team-circle-two text-center p-1 px-1">
+                                        <div className="home-team-circle-one flex-row d-flex align-items-center justify-content-center">
+                                            <div className="home-team-circle-two flex-row d-flex align-items-center justify-content-center text-center">
                                                 <img src={
                                                         items.atlogo
                                                     }

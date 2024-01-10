@@ -20,15 +20,34 @@ function Matchdetailslive() {
     useEffect(() => {
         getdata()
     },)
+    const [seconds, setSeconds] = useState(0);
+  
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setSeconds(prevSeconds => (prevSeconds + 1) % 5400); // 5400 seconds = 90 minutes
+      }, 1000);
+      
+      return () => clearInterval(timer);
+    }, []);
+    
+    const formattedMinutes = Math.floor(seconds / 60).toString().padStart(2, '0');
+    const formattedSeconds = (seconds % 60).toString().padStart(2, '0');
+    const gradientStyle = {
+      background: 'linear-gradient(90deg, #095256, #439775)',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+      fontSize: '36px',
+      fontWeight: 'bold',
+    };
     return (
         <>
             <div>
-                <div className="card bg-info-st  sticky-top pb-2">
+                <div className="card bg-info-st  sticky-top pb-1">
                     <div className="d-flex justify-content-between align-items-center px-3 my-1">
                         <div className="fs-5 fw-4 ">
                             <Link className="link" to='/live-events-list'><Icon icon="ic:round-arrow-back-ios"/></Link>
                         </div>
-                        <div className="fs-6 text-color fw-3 mt-1">England Primier League</div>
+                        <div className="fs-12 text-color fw-3 mt-1">England Primier League</div>
                         <div className="fs-5  mb-1">
                             <Icon icon="tabler:dots" />
                         </div>
@@ -43,14 +62,14 @@ function Matchdetailslive() {
                             <div className="d-flex">
                                 <div className="fs-12 justify-content-start mt-4 mx-2 fw-4 " id="home-team-name">{Livedata.htname}</div>
                                 <div className="match-details-circle-one bg-t d-flex flex-row align-items-center justify-content-center">
-                                    <div className="match-details-circle-two p-1 px-1 text-center  bg-t d-flex flex-row align-items-center justify-content-center">
+                                    <div className="match-details-circle-two text-center  bg-t d-flex flex-row align-items-center justify-content-center">
                                         <img src={Livedata.htlogo} alt="hometeamname" className="team-logo"/>
                                     </div>
                                 </div>
                             </div>
                            <div>
                            </div>
-                            <div className="d-block mx-2 text-center">
+                            <div className="d-block mx-1 text-center">
                                 <p className="fs-3 fw-bold margin-zero">
                                     <span className='text-color'>{Livedata.htscore}</span>
                                     <span className='mx-1'>:</span>
@@ -60,7 +79,7 @@ function Matchdetailslive() {
 
                             <div className="d-flex">
                                 <div className="match-details-circle-one bg-t d-flex flex-row align-items-center justify-content-center">
-                                    <div className="match-details-circle-two p-1 px-1 bg-t d-flex flex-row align-items-center justify-content-center">
+                                    <div className="match-details-circle-two bg-t d-flex flex-row align-items-center justify-content-center">
                                         <img src={Livedata.atlogo} alt="awayteamname" className="team-logo"/>
                                     </div>
                                 </div>
@@ -69,7 +88,7 @@ function Matchdetailslive() {
                         </div>
                         <div className='d-flex justify-content-center  mb-1'>
                             <div className='d-block text-center'>
-                            <h1 className='fs-12 fw-bold text-color'>1-half, 45:56  (1-0)</h1>
+                            <h1 className='fs-12 fw-bold text-color'>{formattedMinutes < 45 ? "1-half" : "2-half"}, {formattedMinutes}:{formattedSeconds}  (1-0)</h1>
                             </div>
                         </div>
                     </div>

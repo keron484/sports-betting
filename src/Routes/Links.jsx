@@ -39,6 +39,7 @@ import { Defaultbetslip } from '../Pages/Nonlivepages/bet-slip';
 import { loggedin } from '../Redux/slices/AuthSlice';
 import Lastsection from '../Pages/Nonlivepages/last-section';
 import Livematchstats from '../Pages/Livepage/Livematchstats';
+import VirtualGames from '../Pages/Nonlivepages/Vitualgames';
 function Links()
 {
    const number =  useSelector(count);
@@ -67,14 +68,14 @@ function Links()
           <Route path='/bet-history-list' element={<Bethistorylist />}></Route>  
           <Route path='/bet-slip' element={number <= 0 ? <Defaultbetslip /> : <Betslip />}></Route>
           <Route path='/promocode' element={number <= 0 ? <Defaultbetslip /> : <Promocode />}></Route>  
-          <Route path={loginStatus ? '/account-deposite' : '/login'} element={<Deposite />}></Route>
+          <Route path={loginStatus ? '/account-deposite' : '/'} element={<Deposite />}></Route>
           <Route path='/messages' element={<Messages />}></Route> 
           <Route path='/bonus-account' element={number <= 0 ? <Defaultbetslip /> : <BonusAccount />}></Route>
           <Route path='/customer-support' element={<Customersupport></Customersupport>}></Route> 
-          <Route path={loginStatus ? '/withdraw' : '/login'} element={<Cashout></Cashout>}></Route> 
+          <Route path={loginStatus ? '/withdraw' : '/'} element={<Cashout></Cashout>}></Route> 
           <Route path='/promo' element={<Promopage></Promopage>}></Route>
-          <Route path={loginStatus ? '/orange-deposite' : '/login'} element={<Orangedeposite></Orangedeposite>}></Route>
-          <Route path={loginStatus ? '/mtn-deposite' : '/login'} element={<Mtndeposite></Mtndeposite>}></Route>
+          <Route path={loginStatus ? '/orange-deposite' : '/'} element={<Orangedeposite></Orangedeposite>}></Route>
+          <Route path={loginStatus ? '/mtn-deposite' : '/'} element={<Mtndeposite></Mtndeposite>}></Route>
           <Route path='/match-details-live/:id' element={<Matchdetailslive></Matchdetailslive>}></Route>
           <Route path='/last-section' element={<Lastsection />}></Route>  
           <Route path='/pre-matches/:Eventtitle' element={<Matches />}></Route> 
@@ -85,12 +86,15 @@ function Links()
           <Route path='/live-events/:Eventtitle' element={<Eventslive />}></Route>  
           <Route path='/live-events-list' element={<Eventslivelist/>}></Route>
           <Route path='/mybets-setting/:id' element={<Mybetsettings></Mybetsettings>}></Route>
+          <Route path='/virtual-games' element={<VirtualGames></VirtualGames>}></Route>
        </Route> 
      </Routes>
      <Routes>
        <Route element={<Layoutmobile/>}>
           <Route path='/' element={<Secondsection />}></Route>
+          <Route path='/login-mobile' element={<Secondsection />}></Route>
           <Route path='/second-section' element={<Secondsection />}></Route>
+          <Route path='/virtual-games' element={<VirtualGames></VirtualGames>}></Route>
           <Route path='/match-details-live/:id' element={<Matchdetailslive></Matchdetailslive>}></Route>
           <Route path='/first-section' element={<Firstsection />}></Route>  
           <Route path='/my-account' element={<Useraccount />}></Route>  
@@ -99,7 +103,7 @@ function Links()
           <Route path='/bet-history-list' element={<Bethistorylist />}></Route>  
           <Route path='/bet-slip' element={number <= 0 ? <Defaultbetslip /> : <Betslip />}></Route>
           <Route path='/promocode' element={number <= 0 ? <Defaultbetslip /> : <Promocode />}></Route>  
-          <Route path={loginStatus ? '/account-deposite' : '/login'} element={<Deposite />}></Route>
+          <Route path={loginStatus ? '/account-deposite' : '/login-mobile'} element={<Deposite />}></Route>
           <Route path='/messages' element={<Messages />}></Route> 
           <Route path='/bonus-account' element={number <= 0 ? <Defaultbetslip /> : <BonusAccount />}></Route> 
           <Route path='/last-section' element={<Lastsection />}></Route>  
@@ -111,10 +115,10 @@ function Links()
           <Route path='/live-events/:Eventtitle' element={<Eventslive />}></Route>  
           <Route path='/live-events-list' element={<Eventslivelist/>}></Route>
           <Route path='/customer-support' element={<Customersupport></Customersupport>}></Route> 
-          <Route path={loginStatus ? '/withdraw' : '/login'} element={<Cashout></Cashout>}></Route> 
+          <Route path={loginStatus ? '/withdraw' : '/login-mobile'} element={<Cashout></Cashout>}></Route> 
           <Route path='/promo' element={<Promopage></Promopage>}></Route>
-          <Route path={loginStatus ? '/orange-deposite' : '/login'} element={<Orangedeposite></Orangedeposite>}></Route>
-          <Route path={loginStatus ? '/mtn-deposite' : '/login'} element={<Mtndeposite></Mtndeposite>}></Route>
+          <Route path={loginStatus ? '/orange-deposite' : '/login-mobile'} element={<Orangedeposite></Orangedeposite>}></Route>
+          <Route path={loginStatus ? '/mtn-deposite' : '/login-mobile'} element={<Mtndeposite></Mtndeposite>}></Route>
           <Route path='/mybets-setting/:id' element={<Mybetsettings></Mybetsettings>}></Route>
        </Route> 
      </Routes>

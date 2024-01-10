@@ -19,7 +19,7 @@ function Layouttwo () {
       </nav>
       <div className='container'>
         <div className='row'>
-          <div className='col-lg-4' id='first-section'>
+          <div className='col-lg-4' id='last-section'>
             <Firstsection></Firstsection>
           </div>
           <div className='col-lg-4' id='mid-section'>

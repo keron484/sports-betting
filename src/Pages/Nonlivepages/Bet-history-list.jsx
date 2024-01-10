@@ -5,12 +5,13 @@ import { Bonusbetlist } from "../../components/bet-history-items";
 import Bethistoryitems from "../../components/bet-history-items";
 import { useSelector } from "react-redux";
 import { Player } from '@lottiefiles/react-lottie-player';
-function Bethistorylist()
-{
-  const acc_balance = useSelector(user_balance);
+const Betcomponent = () => {
   const betItems = useSelector(slipitems);
   const bonus_data = useSelector(bonus_bet_list);
-  const betdata = betItems.map((items) => {
+  return(
+    <>
+     {  
+      betItems.map((items) => {
       return(
         <Bethistoryitems
         id = {items.id}
@@ -21,24 +22,35 @@ function Bethistorylist()
         stake={items.stake}
         potential_wininings={items.potential_wininings.toFixed(2)}
         bonus_calcu={items.bonus_calcu.toFixed(2)}
+        status={items.status}
         />
       );
-  })
-  const betdata_bonus = bonus_data.map((items) => {
-    return(
-      <>
-        <Bonusbetlist 
-          id = {items.id}
-          date = {items.date}
-          time = {items.time}
-          bettype = {items.bettype}
-          totalOdds = {items.totalOdds}
-          stake = {items.stake}
-          potential_wininings = {items.potential_wininings}
-        />
-      </>
-    )
-  })
+  })}
+   {
+       bonus_data.map((items) => {
+        return(
+          <>
+            <Bonusbetlist 
+              id = {items.id}
+              date = {items.date}
+              time = {items.time}
+              bettype = {items.bettype}
+              totalOdds = {items.totalOdds}
+              stake = {items.stake}
+              potential_wininings = {items.potential_wininings}
+            />
+          </>
+        )
+      })
+   }
+    </>
+  )
+}
+function Bethistorylist()
+{
+  const betItems = useSelector(slipitems);
+  const bonus_data = useSelector(bonus_bet_list);
+  const acc_balance = useSelector(user_balance);
     return(
      <>
 <div>
@@ -77,7 +89,7 @@ function Bethistorylist()
      autoplay 
      speed={2} 
      className="player" /> 
-      : betdata_bonus }
+      : <Betcomponent /> }
   </div>
 </div>
    

@@ -22,7 +22,7 @@ function Betslip()
     setMinimise(prevalue => !prevalue);
   }
    const styles = {
-     maxHeight: minimise ? "475px" : "250px"
+     maxHeight: minimise ? "500px" : "125px"
    }
 
    const num_events = useSelector(count);
@@ -70,26 +70,26 @@ function Betslip()
    return(
         <>
 <div>
-  <div className="d-flex flex-row card py-3 justify-content-between px-3 align-items-center">
+  <div className="d-flex flex-row card py-2 justify-content-between px-3 align-items-center sticky-top">
     <span className="icon-color fs-5"><Link className='link' to="/first-section"><Icon icon="ic:round-arrow-back-ios" /></Link></span>          
     <span className="fw-4 fs-13 mx-2 text-color">Bet Slip</span> 
     <div>
     <span type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal"><Icon icon="mingcute:dots-fill" className='icon-color fs-5'/></span>         
     <span><Icon icon="mdi:trash" className='fs-5 icon-color mx-1' onClick={removeall}/></span> </div>         
   </div>
-    <div className="d-block mt-2 pb-sm " id="slip-events" style={styles}>
-     
+  <div className="parent-one col d-flex flex-column justify-content-between">
+  <div className="d-block mt-2 pb-sm " id="slip-events" style={styles}>
         {rendered_selections}
-     
   </div>
-  <div className="card mt-3 p-2">
-{!minimise && <div className='parent pos-fixed'>
+  <div className="card  mt-3 p-2">
+      {!minimise && 
+<div className='parent'>
  <div className="text-center">
-      <button className="badge-sm c-stbl top-3  bg-white " onClick={minmaxfunc}><Icon icon="ep:arrow-up-bold" className='c-stbl'/></button>
+      <button className="badge-sm c-stbl top-3 margin-zero  bg-white " onClick={minmaxfunc}><Icon icon="ep:arrow-up-bold" className='c-stbl'/></button>
     </div>
     <div className="card p-1 bg-f9 text-color">
-      <h2 className="fs-6 margin-zero py-2 fw-4"><span className="float-start mt-1">Events</span><span className="p-1 float-end fw-bold" id="num_events"><Icon icon="bi:stack" className='fs-6 icon-color mx-2' />{num_events}</span></h2>
-      <h2 className="fs-6 margin-zero py-2 fw-4"><span className="float-start mt-1">Odds</span><span className="p-1 float-end fw-bold" id="odd_total">{totalOdds.toFixed(2)}</span></h2>                        
+      <h2 className="fs-13 margin-zero py-1 fw-4"><span className="float-start mt-1">Events</span><span className="p-1 float-end fw-bold" id="num_events"><Icon icon="bi:stack" className='fs-6 icon-color mx-2' />{num_events}</span></h2>
+      <h2 className="fs-13 margin-zero py-1 fw-4"><span className="float-start mt-1">Odds</span><span className="p-1 float-end fw-bold" id="odd_total">{totalOdds.toFixed(2)}</span></h2>                        
     </div>
     <div className="d-flex justify-content-between mt-1 p-1 rounded-1 bg-lav">
       <NavLink to='/bet-slip' className={({isActive}) => isActive ? "btn button-color fs-12 c-white" : "btn  fs-12 text-color"}> <div className="fs-12 "> <div className='bg-t fw-3 border-none '>Current Account</div> </div></NavLink>
@@ -108,46 +108,50 @@ function Betslip()
         value={stake}
        />
       <button 
-        className="btn btn-scondary bet mx-2 w-25 rounded-1"
+        className="btn btn-scondary bet mx-2 w-25 rounded-1 fs-13"
         id="btn-bet"
         onClick={placebet}
         >
          Place Bet
       </button>
     </div>
-    <p className="fs-6 mt-1 margin-zero  fw-bold text-color">Range <span>1 ₣</span>- <span>500 000 ₣</span></p>
-    <p className="fs-6  margin-zero py-1 fw-bold">Bonus: <span className={bonus_calcu <= 0 ? "float-end" : "c-green float-end"}>{ bonus_calcu.toFixed(2) }<span> ₣ </span></span> </p>
-    <h2 className="fs-6 margin-zero  fw-bold">Potential Winnings: <span className={potential_wininings <= 0 ? "float-end" : "c-green float-end"}>{potential_wininings.toFixed(2)}<span> ₣  </span></span></h2>
-    <p className="fs-6 margin-zero py-1 fw-3">Bonus Percentage
-      <span className={bonus <= 0 ? "fs-6 margin-zero py-1 fw-3 float-end" : "c-green float-end fw-bold fs-6"}>{`${bonus} %`}</span>
+    <p className="fs-13 mt-1 margin-zero  fw-bold text-color">Range <span>1 ₣</span>- <span>500 000 ₣</span></p>
+    <p className="fs-13  margin-zero py-1 fw-bold">Bonus: <span className={bonus_calcu <= 0 ? "float-end" : "c-green float-end"}>{ bonus_calcu.toFixed(2) }<span> ₣ </span></span> </p>
+    <h2 className="fs-13 margin-zero  fw-bold">Potential Winnings: <span className={potential_wininings <= 0 ? "float-end" : "c-green float-end"}>{potential_wininings.toFixed(2)}<span> ₣  </span></span></h2>
+    <p className="fs-13 margin-zero py-1 fw-3">Bonus Percentage
+      <span className={bonus <= 0 ? "fs-13 margin-zero py-1 fw-3 float-end" : "c-green float-end fw-bold fs-13"}>{`${bonus} %`}</span>
     </p>
-    <div className="progress" role="progressbar" aria-label="Success example" aria-valuenow={75} aria-valuemin={0} aria-valuemax={100}>
+    <div className="progress mb-2" role="progressbar" aria-label="Success example" aria-valuenow={75} aria-valuemin={0} aria-valuemax={100}>
   <div className="progress-bar bg-success" style={style_two}>{`${bonus} %`}</div>
 </div> 
-</div>}
+</div>
+
+}
 
 {minimise && <div className='card border-none'>
   <div className="d-flex justify-content-between px-2 mt-2 text-color">
     <div className="d-block mx-2 text-center">
-    <span className="fs-6 fw-bold"><Icon icon="bi:stack" className='icon-color mx-2' />{num_events}</span>
+    <span className="fs-13 fw-bold"><Icon icon="bi:stack" className='icon-color mx-2' />{num_events}</span>
      <p className="fs-12 fw-3 text-color pt-1">Events</p>
     </div>
     <div className="d-block text-center">
-      <h1 className='fs-6 fw-bold'>{totalOdds.toFixed(2)}</h1>
+      <h1 className='fs-13 fw-bold'>{totalOdds.toFixed(2)}</h1>
       <p className="fs-12 fw-3 text-color">Odds</p>
     </div>
-    <button className='bet-btn w-25' onClick={minmaxfunc}>Bet</button>
+    <button className='bet-btn w-25 fs-12 fw-3' onClick={minmaxfunc}>Bet</button>
   </div>
-  <p className='fs-6 fw-3 margin-zero py-1 '>Bonus Percentage
-   <span className='fs-6 fw-3 float-end'>{`${bonus} %`}</span>
+  <p className='fs-13 fw-3 margin-zero py-1 '>Bonus Percentage
+   <span className='fs-13 fw-3 float-end'>{`${bonus} %`}</span>
   </p>
   <div className="progress" role="progressbar" aria-label="Success example" aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}>
   <div className="progress-bar bg-success" style={style_two}>{`${bonus} %`}</div>
 </div>
 </div>
 }
+  </div>
 
   </div>
+  {/*Trying to divide into two equal parts*/}
 </div>
 
 

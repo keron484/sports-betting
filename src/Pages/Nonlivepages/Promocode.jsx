@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectedList, count, slipActions } from '../../Redux/slices/BetslipSlice';
 import { user_balance } from '../../Redux/slices/BetSlice';
+import Slipitems from '../../components/Slip-items';
 function Promocode()
 {
   const dispatch = useDispatch();
@@ -31,18 +32,21 @@ function Promocode()
         totalOdds *= element.odd
    });
   
-  
-      const rendered_selections = selected_events.map(items => (
-        <>
-        <div className="card mb-1 border-none p-2 text-color shadow-sm" key={items.id}>
-      <h2 className="fs-12  margin-zero py-1"><span className="float-start mt-1 mx-3 py-1 fs-12">{items.match_name}</span><span className='float-end'><Icon icon="ph:x-circle-fill" className='fs-4 icon-color mx-2'/></span></h2>
-      <p className="fw-3 fs-12 mx-3 margin-zero">{items.match_date} {items.match_time}, {items.bet_time} </p>
-      <div className="card  px-3 bg-f9 text-color">
-        <h2 className="fs-12 mt-1 mb-1"><span className="float-start mt-1 fw-bold">{items.market_lable}</span><span className="p-1 float-end fw-bold">{items.odd}</span></h2>
-      </div>
-    </div>
-        </>
-      ))
+   const rendered_selections = selected_events.map(items => (
+    <>
+     <Slipitems 
+       id={items.id}
+       match_name = {items.match_name}
+       match_time = {items.match_time}
+       match_date = {items.match_date}
+       kick_off_time = {items.kick_off_time}
+       market_lable = {items.market_lable}
+       odd = {items.odd}
+       market_category = {items.market_category}
+       parentId = {items.parentId}
+     />
+    </>
+  ))
    return(
         <>
 <div>
@@ -63,8 +67,8 @@ function Promocode()
       <button className="badge-sm c-stbl top-3  bg-white " onClick={minmaxfunc}><Icon icon="ep:arrow-up-bold" className='icon-color'/></button>
     </div>
     <div className="card p-1 bg-f9">
-      <h2 className="fs-6 text-color margin-zero py-2"><span className="float-start mt-1">Events</span><span className="p-1 float-end fw-bold" id="num_events"><Icon icon="bi:stack" className='fs-6 icon-color mx-2' />{num_events}</span></h2>
-      <h2 className="fs-6 text-color margin-zero py-2"><span className="float-start mt-1">Odds</span><span className="p-1 float-end fw-bold" id="odd_total">{totalOdds.toFixed(2)}</span></h2>                        
+      <h2 className="fs-13 text-color margin-zero py-2"><span className="float-start mt-1">Events</span><span className="p-1 float-end fw-bold" id="num_events"><Icon icon="bi:stack" className='fs-6 icon-color mx-2' />{num_events}</span></h2>
+      <h2 className="fs-13 text-color margin-zero py-2"><span className="float-start mt-1">Odds</span><span className="p-1 float-end fw-bold" id="odd_total">{totalOdds.toFixed(2)}</span></h2>                        
     </div>
     <div className="d-flex justify-content-between mt-1 p-1 rounded-1 bg-lav">
     <NavLink to='/bet-slip' className={({isActive}) => isActive ? "btn button-color fs-12 c-white" : "btn  fs-12 text-color"}> <div className="fs-12 "> <div className='bg-t fw-3 border-none '>Current Account</div> </div></NavLink>
@@ -76,13 +80,13 @@ function Promocode()
     <div className="input-group">
       <input 
         type="number" 
-        className="form-control form-control-sm"
+        className="form-control form-control-sm border-success"
         placeholder="Enter Promocode" 
         id="stake-amount"
         onChange={handlechange}
         value={stake}
        />
-      <button className="btn btn-scondary bet mx-2 rounded-1" id="btn-bet">Bet</button>
+      <button className="btn btn-scondary bet mx-2 rounded-1 w-25 fs-12" id="btn-bet">Place Bet</button>
     </div>
     <p className="fs-13 my-3 text-color margin-zero  fw-bold">Place your bets by entering the coupon gifts</p>
     

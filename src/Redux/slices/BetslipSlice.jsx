@@ -2,7 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const slipslice = createSlice({
      name:"betslip",
      initialState:{
-      selections:[],
+      selections:[
+
+      ],
         total_odds:0,
         num_events:0,
         progress:0,

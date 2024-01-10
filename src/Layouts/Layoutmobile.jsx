@@ -32,7 +32,7 @@ function Layoutmobile()
         </div>
         <footer>
         <Navbottom></Navbottom>
-            <div className='z-'>
+            <div className='z-1'>
                 <Navbottomlarge></Navbottomlarge>
             </div>
         </footer>
