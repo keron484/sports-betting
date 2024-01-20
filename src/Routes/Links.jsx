@@ -40,6 +40,7 @@ import { loggedin } from '../Redux/slices/AuthSlice';
 import Lastsection from '../Pages/Nonlivepages/last-section';
 import Livematchstats from '../Pages/Livepage/Livematchstats';
 import VirtualGames from '../Pages/Nonlivepages/Vitualgames';
+import AviatorGame from '../Games/Aviator';
 function Links()
 {
    const number =  useSelector(count);
@@ -48,6 +49,7 @@ function Links()
      <>
      <BrowserRouter>
      <Routes>
+     <Route path='/aviator' element={<AviatorGame />}></Route>
      <Route path='/login' element={<Login/>}></Route>
      <Route path='/authentication' element={<Authentication></Authentication>}></Route>
      <Route path='/change-password' element={<Changepassword></Changepassword>}></Route>

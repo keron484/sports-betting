@@ -4,12 +4,16 @@ import { useSelector } from "react-redux";
 export  function Loggedin()
 {
     const acc_balance = useSelector(user_balance);
+    const isDecimal = (number) => {
+         const numberString = number.toString();
+         return numberString.includes(".");
+    }
     return(
         <>
         <div className="d-flex justify-content-between align-items-center"> 
        <div className="mt-2 mx-2 w-75">
         <p className="fs-12 fw-3 margin-zero px-1 text-color">Current Acccout</p>
-        <h1 className="fw-bold fs-5 mt-1 mx-1 z-3 text-color">{acc_balance}<span className="mx-2">₣</span></h1>
+        <h1 className="fw-bold fs-5 mt-1 mx-1 z-3 text-color">{isDecimal(acc_balance) ? acc_balance.toFixed(2) : acc_balance}<span className="mx-2">₣</span></h1>
        </div>
        <div className="mt-1">
        <button 

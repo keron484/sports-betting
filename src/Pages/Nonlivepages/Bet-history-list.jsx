@@ -51,6 +51,10 @@ function Bethistorylist()
   const betItems = useSelector(slipitems);
   const bonus_data = useSelector(bonus_bet_list);
   const acc_balance = useSelector(user_balance);
+  const isDecimal = (number) => {
+    const numberString = number.toString();
+    return numberString.includes(".");
+  }
     return(
      <>
 <div>
@@ -62,7 +66,7 @@ function Bethistorylist()
     </div>
     <div className="d-block p-1 mx-2">
       <p className="fs-12 fw-3 text-color">Main Account</p>
-      <h1 className="fs-5 fw-bold top-2 ls-1 text-color">{acc_balance}<span className="fw-bold mx-2">₣</span> </h1>
+      <h1 className="fs-5 fw-bold top-2 ls-1 text-color">{isDecimal(acc_balance)? acc_balance.toFixed(2) : acc_balance}<span className="fw-bold mx-2">₣</span> </h1>
     </div>
     <div className="card d-flex flex-row justify-content-around rounded-2 bg-f9">
       <div className="d-block text-center">

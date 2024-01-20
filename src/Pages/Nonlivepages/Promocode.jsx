@@ -31,7 +31,10 @@ function Promocode()
    selected_events.forEach(element => {
         totalOdds *= element.odd
    });
-  
+   const isDecimal = (number) => {
+    const numberString = number.toString();
+    return numberString.includes(".");    
+}
    const rendered_selections = selected_events.map(items => (
     <>
      <Slipitems 
@@ -76,7 +79,7 @@ function Promocode()
       <NavLink to='/bonus-account' className={({isActive}) => isActive ? "btn button-color fs-12 c-white" : "btn  fs-12 text-color"}> <div className="fs-12 "> <div className='bg-t fw-3 border-none '>Bonus Account</div> </div></NavLink>
     </div>
     <p className="fs-12 margin-zero py-1 text-color fw-4">Balance: </p>
-    <h2 className="fs-5 top-2 margin-zero py-1 text-color"><span className="float-start mt-1 ls-1 fw-bold" id="balance">{acc_balance}<span className="mx-1">₣</span> </span> </h2>
+    <h2 className="fs-5 top-2 margin-zero py-1 text-color"><span className="float-start mt-1 ls-1 fw-bold" id="balance">{isDecimal(acc_balance) ? acc_balance.toFixed(2) : acc_balance}<span className="mx-1">₣</span> </span> </h2>
     <div className="input-group">
       <input 
         type="number" 

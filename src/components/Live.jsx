@@ -16,7 +16,7 @@ function Liveeventsitem() {
     }
     useEffect(() => {
         getdata(Livedata);
-    },)
+    }, [Livedata])
     const [seconds, setSeconds] = useState(0);
   
     useEffect(() => {

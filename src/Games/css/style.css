@@ -1,0 +1,23 @@
+:root{
+ --aviator-teamcolor:#005689;
+ --darker--white:#f9f9f9;
+ --grey-color:#555;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--aviator-teamcolor);
+}
+.container{
+    height: 100%;
+}
+.balance{
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #ddd;
+    border-radius: 50px;
+}

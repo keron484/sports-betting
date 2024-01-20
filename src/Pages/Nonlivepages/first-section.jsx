@@ -10,10 +10,8 @@ function Firstsection()
       <>    
 <div>
   <div className="card mb-2 p-2 sticky-top">
-    <div className="d-flex justify-content-between align-items-center">
-      <p><Icon icon="ic:round-arrow-back-ios"  className="icon-color mt-2 mx-1" /></p>
+    <div className="d-flex justify-content-center align-items-center">
       <p className="fs-13 fw-bold mt-2 text-color">Menu</p>
-      <p></p>
     </div>
   </div>
   <div className="d-block pb-xxl" id="menu">
