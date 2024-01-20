@@ -199,7 +199,7 @@ body{
      color: steelblue;
  }
  .c-green{
-     color: forestgreen;
+     color: var(--color-green);
  }
  .c-red{
      color: var(--color-danger);
@@ -265,14 +265,14 @@ body{
      border-radius: 0;
  }
  .bet-btn{
-    width: 15%;
-    border: none;
-    background-color: var(--color-green);
-    height: 25%;
-    color: var(--white-color);
-    border-radius: 5px;
-    padding: 5px;
-}
+    background: var(--color-green);
+     color: var(--white-color);
+     font-weight: 500;
+     padding: 5px;
+     border-radius: 8px;
+     border: none;
+     width: 100%;
+ }
 .bet-live{
     border: none;
     width: 30%;
@@ -282,6 +282,13 @@ body{
 .button{
     border: none;
     background-color: transparent;
+ }
+ .dash{
+    border: none;
+    width: 15%;
+    border-radius: 25px;
+    background-color: #ccc;
+    height: 5px;
  }
  .icon-button {
     position: relative;
@@ -527,8 +534,46 @@ body{
     height: 100px;
     border-radius: 10px;
  }
+ .parent{
+    flex-direction: column;
+    height: 85dvh;
+    display: flex;
+ }
  /*container design ends */
- 
+
+ /*custom icon styles */
+.icon-one{
+   font-size: 28px;
+   position: relative;
+   left: -3px;
+}
+.icon-two{
+   font-size: 19px;
+   border-radius: 50px;
+   background-color: var(--white-primary);
+   position: relative;
+   top: -12px;
+   left: 3px;
+   border: 1px solid var(--white-primary);
+}
+.icon-validated-one{
+   font-size: 28px;
+   position: relative;
+   left: -3px;
+   color: var(--color-green);
+}
+.icon-validated-two{
+    font-size: 19px;
+    border-radius: 50px;
+    background-color: var(--white-primary);
+    position: relative;
+    top: -12px;
+    left: 3px;
+    border: 1px solid var(--white-primary);
+    color: #5cb85c;
+}
+ /*custom icon styles end */
+
  /*navbar two design starts */
  .nav-top{
      white-space: nowrap;

@@ -58,7 +58,8 @@ const placebetSlice = createSlice({
                 bettype:newItems.bettype,
                 points:newItems.points,
                 totalOdds:newItems.totalOdds,
-                selected_events:newItems.selected_events
+                selected_events:newItems.selected_events,
+                winStatus:false
             })
             state.acc_balance -= stake
             alert("bet accepted")
@@ -168,6 +169,22 @@ const placebetSlice = createSlice({
 
             }
         },
+        validateSlipWin(state, action){
+            const newItems = action.payload;
+            const potWinnings = newItems.potential_wininings;
+            const bonus_calcu = newItems.bonus_calcu;
+            const newWinnings = Number(potWinnings + bonus_calcu);
+            const exhistingItem = state.events_list.find((items) => items.id === newItems.newID);
+            if(exhistingItem){
+                exhistingItem.winStatus = true;
+                state.acc_balance += newWinnings;
+                alert("Bet slip has been validated to win")
+            }
+            else{
+               alert("Not found");
+            }
+  
+          },
         placepromocodebet(state, action)
         {
            

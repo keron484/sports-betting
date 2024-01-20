@@ -3,6 +3,7 @@ import {Icon} from '@iconify/react';
 import { useParams,Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { slipitems } from "../../Redux/slices/BetSlice";
+import { CustomIconone } from '../../custom-icons/icons';
 function Bethistorydetails()
 {
   const params = useParams();
@@ -24,13 +25,32 @@ function Bethistorydetails()
          atscore = {items.atscore}
          timelable = {items.timelable}
          scoreshalf = {items.scoreshalf}
+         winStatus = {new_array[0].winStatus}
          />
        );
   })
+  const ValidatedItem = () => {
+    return(
+      <>
+       <span className="float-end fw-bolder c-green  fs-6">
+         Won
+         <Icon icon="ph:seal-check-fill" className='c-green fs-4 mx-1'/>
+         </span>
+      </>
+    )
+  }
+  const ValidatedItemtwo = () => {
+    return(
+      <>
+       <span className="float-end fw-bolder c-stbl">Accepted</span>
+      </>
+    )
+  }
     return(
         <>      
 <div>
   {new_array.map((item) => {
+    const betStatus = item.winStatus;
     return(
       <>
         <div className="card p-2 sticky-top shadow-sm mb-2">
@@ -41,19 +61,21 @@ function Bethistorydetails()
     </div>
     <div className="row px-2 my-1">
       <div className="d-flex flex-row border-bottom ">
-        <button className="badge-lg fs-4 mx-2"><Icon icon="icon-park-solid:transaction-order" className="icon-color mb-1"/></button>
+        <button className="badge-lg  mx-2">
+           <CustomIconone  winStatus={betStatus} />
+        </button>
         <div className="d-block ">
-          <div className="justify-content-start fs-12 text-color fw-4">ID: <span>{item.id}</span> </div>
-          <div className="justify-content-start fs-12 fw-5 c-stbl">{item.bettype}</div>
-          <div className="justify-content-start fs-12 text-color fw-4">{item.date}</div>
+          <div className="justify-content-start fs-12 text-color fw-4">ID:<span>SHAF104102489{item.id}</span> </div>
+          <div className="justify-content-start fs-12 fw-5 c-stbl">Type: {item.bettype}</div>
+          <div className="justify-content-start fs-12 text-color fw-4">Date: {item.date}</div>
         </div>
       </div>
       <div className="d-block mt-2">
-        <p className="fs-6 text-color margin-zero py-1 fw-3">Odds <span className="float-end fw-bold mx-1">{item.totalOdds.toFixed(2)}<span /></span></p>
-        <p className="fs-6 text-color margin-zero py-1 fw-3">Stake <span className="float-end fw-bold ls-1">{item.stake}<span className="mx-1">₣<span><span /></span></span></span></p>
-        <p className="fs-6 text-color margin-zero py-1 fw-3">Bonus<span className="float-end fw-bold">{item.bonus_calcu.toFixed(2)}<span className="mx-1">₣<span><span /></span></span></span></p>
-        <p className="fs-6 text-color margin-zero py-1 fw-3">Potential Wins <span className="float-end fw-bold ls-1">{item.potential_wininings}<span className="mx-1">₣<span><span /></span></span></span></p>
-        <p className="fs-6  margin-zero  fw-3"> <span className="text-color">Status</span> <span className="float-end fw-bold c-stbl mx-1"> Accepted <span /></span></p>
+        <p className="fs-6 text-color margin-zero py-1 fw-3">Odds: <span className="float-end fw-bold mx-1">{item.totalOdds.toFixed(2)}<span /></span></p>
+        <p className="fs-6 text-color margin-zero py-1 fw-3">Stake: <span className="float-end fw-bolder">{item.stake} ₣</span></p>
+        <p className="fs-6 text-color margin-zero py-1 fw-3">Bonus: <span className={betStatus ? "float-end fw-bolder c-green" : "float-end fw-bolder"}>{item.bonus_calcu.toFixed(2)} ₣</span></p>
+        <p className="fs-6 text-color margin-zero py-1 fw-3">Potential Wins: <span className={betStatus ? "float-end fw-bolder c-green" : "float-end fw-bolder"}>{item.potential_wininings} ₣</span></p>
+        <p className="fs-6  margin-zero  fw-3"> <span className="text-color">Status: {betStatus ? <ValidatedItem /> : <ValidatedItemtwo />}   </span ></p>
       </div>
     </div>
   </div>

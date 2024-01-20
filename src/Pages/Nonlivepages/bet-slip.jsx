@@ -8,6 +8,12 @@ import Slipitems from '../../components/Slip-items';
 import { Player } from '@lottiefiles/react-lottie-player';
 function Betslip()
 {
+  const getCurrentTimeAndDate = () => {
+    const currentDateTime = new Date();
+    const time = currentDateTime.toLocaleTimeString();
+    const date = currentDateTime.toLocaleDateString();
+    return `${date} ${time}`;
+  };
   const [minimise, setMinimise] = useState(false);
   const [stake, setStake] = useState("");
   const handlechange = event => {
@@ -22,7 +28,7 @@ function Betslip()
     setMinimise(prevalue => !prevalue);
   }
    const styles = {
-     maxHeight: minimise ? "500px" : "125px"
+    maxHeight: minimise ? '40%' : '50%'
    }
 
    const num_events = useSelector(count);
@@ -49,7 +55,7 @@ function Betslip()
       bonus_calcu,
       potential_wininings,
       totalOdds,
-      date:"12-29-2023",
+      date: getCurrentTimeAndDate(),
       bettype: num_events <= 1 ? "Single" : "Accumulator",
       points:num_events <= 1 ? "0" :  "1", 
       selected_events
@@ -70,25 +76,40 @@ function Betslip()
          />
         </>
       ))
-   return(
-        <>
-<div>
-  <div className="d-flex flex-row card py-2 justify-content-between px-3 align-items-center sticky-top">
-    <span className="icon-color fs-5"><Link className='link' to="/first-section"><Icon icon="ic:round-arrow-back-ios" /></Link></span>          
-    <span className="fw-4 fs-13 mx-2 text-color">Bet Slip</span> 
-    <div>
-    <span type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal"><Icon icon="mingcute:dots-fill" className='icon-color fs-5'/></span>         
-    <span><Icon icon="mdi:trash" className='fs-5 icon-color mx-1' onClick={removeall}/></span> </div>         
-  </div>
-  <div className="parent-one col d-flex flex-column justify-content-between">
-  <div className="d-block mt-2 pb-sm " id="slip-events" style={styles}>
-        {rendered_selections}
-  </div>
-  <div className="card  mt-3 p-2">
-      {!minimise && 
-<div className='parent'>
- <div className="text-center">
-      <button className="badge-sm c-stbl top-3 margin-zero  bg-white " onClick={minmaxfunc}><Icon icon="ep:arrow-up-bold" className='c-stbl'/></button>
+      const BetSlipsectionOne = () => {
+        return(
+          <>
+          <div className='card border-none'>
+             <div className="d-flex justify-content-between px-2 mt-2 text-color">
+                 <div className="d-block mx-2 text-center">
+                   <span className="fs-13 fw-bold"><Icon icon="bi:stack" className='icon-color mx-2' />{num_events}</span>
+                     <p className="fs-12 fw-3 text-color margin-zero py-1">Events</p>
+                 </div>
+              <div className="d-block text-center">
+                <h1 className='fs-13 fw-bold margin-zero py-1'>{totalOdds.toFixed(2)}</h1>
+                <p className="fs-12 fw-3 text-color margin-zero">Odds</p>
+            </div>
+           <div className='w-25'>
+           <button className='bet-btn  fs-12 fw-3 ' onClick={minmaxfunc}>Bet</button>
+           </div>
+         </div>
+        <p className='fs-13 fw-3 margin-zero py-1 '>Bonus Percentage
+        <span className='fs-13 fw-3 float-end'>{`${bonus} %`}</span>
+        </p>
+         <div className="progress" role="progressbar" aria-label="Success example" aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}>
+        <div className="progress-bar bg-success" style={style_two}>{`${bonus} %`}</div>
+       </div>
+       </div>
+          </>
+        )
+      }
+      const BetslipsectionTwo = () => {
+        return(
+          <>
+ 
+    <div className="d-flex flex-row align-items-center justify-content-center mb-2">
+      <button className="dash" onClick={minmaxfunc}>
+      </button>
     </div>
     <div className="card p-1 bg-f9 text-color">
       <h2 className="fs-13 margin-zero py-1 fw-4"><span className="float-start mt-1">Events</span><span className="p-1 float-end fw-bold" id="num_events"><Icon icon="bi:stack" className='fs-6 icon-color mx-2' />{num_events}</span></h2>
@@ -99,7 +120,7 @@ function Betslip()
       <NavLink to='/promocode' className={({isActive}) => isActive ? "btn button-color fs-12 c-white" : "btn  fs-12 text-color"}> <div className="fs-12 "> <div className='bg-t fw-3 border-none '>Promo Code</div> </div></NavLink>
       <NavLink to='/bonus-account' className={({isActive}) => isActive ? "btn button-color fs-12 c-white" : "btn  fs-12 text-color"}> <div className="fs-12 "> <div className='bg-t fw-3 border-none '>Bonus Account</div> </div></NavLink>
     </div>
-    <p className="fs-12 margin-zero py-1 text-color fw-4">Balance: </p>
+    <p className="fs-12 margin-zero  text-color fw-4">Balance: </p>
     <h2 className="fs-5 top-2 margin-zero py-1 text-color"><span className="float-start mt-1 ls-1 fw-bold" id="balance">{isDecimal(acc_balance) ? acc_balance.toFixed(2) : acc_balance}<span className="mx-1">₣</span> </span> </h2>
     <div className="input-group">
       <input 
@@ -111,7 +132,7 @@ function Betslip()
         value={stake}
        />
       <button 
-        className="btn btn-scondary bet mx-2 w-25 rounded-1 fs-13"
+        className="btn btn-scondary bet mx-2 w-25 rounded-2 fs-13 py-2"
         id="btn-bet"
         onClick={placebet}
         >
@@ -127,62 +148,50 @@ function Betslip()
     <div className="progress mb-2" role="progressbar" aria-label="Success example" aria-valuenow={75} aria-valuemin={0} aria-valuemax={100}>
   <div className="progress-bar bg-success" style={style_two}>{`${bonus} %`}</div>
 </div> 
-</div>
-
-}
-
-{minimise && <div className='card border-none'>
-  <div className="d-flex justify-content-between px-2 mt-2 text-color">
-    <div className="d-block mx-2 text-center">
-    <span className="fs-13 fw-bold"><Icon icon="bi:stack" className='icon-color mx-2' />{num_events}</span>
-     <p className="fs-12 fw-3 text-color pt-1">Events</p>
-    </div>
-    <div className="d-block text-center">
-      <h1 className='fs-13 fw-bold'>{totalOdds.toFixed(2)}</h1>
-      <p className="fs-12 fw-3 text-color">Odds</p>
-    </div>
-    <button className='bet-btn w-25 fs-12 fw-3' onClick={minmaxfunc}>Bet</button>
-  </div>
-  <p className='fs-13 fw-3 margin-zero py-1 '>Bonus Percentage
-   <span className='fs-13 fw-3 float-end'>{`${bonus} %`}</span>
-  </p>
-  <div className="progress" role="progressbar" aria-label="Success example" aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}>
-  <div className="progress-bar bg-success" style={style_two}>{`${bonus} %`}</div>
-</div>
-</div>
-}
-  </div>
-
-  </div>
-  {/*Trying to divide into two equal parts*/}
-</div>
-
-
-{/*modial */}
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-	
+          </>
+        )
+      }
+   const  BetslipSectionThree = () => {
+      return(
+        <>
+        <div className="d-block mt-2 pb-sm " >
+           <div id="slip-events" style={styles}>
+           {rendered_selections}
+           </div>
+         </div>
         </>
+      )
+   }
+   const BetslipSectionFour = () => {
+       return(
+        <>
+           <div className="d-flex flex-row card py-2 justify-content-between px-3 align-items-center sticky-top">
+             <span className="icon-color fs-5"><Link className='link' to="/first-section"><Icon icon="ic:round-arrow-back-ios" /></Link></span>          
+            <span className="fw-4 fs-13 mx-2 text-color">Bet Slip</span> 
+            <div>
+          <span type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal"><Icon icon="mingcute:dots-fill" className='icon-color fs-5'/></span>         
+           <span><Icon icon="mdi:trash" className='fs-5 icon-color mx-1' onClick={removeall}/></span> </div>         
+         </div>
+        </>
+       )
+   }
+   return(
+        <>
+      <div className='parent'>
+      <div className="child-one">
+      <BetslipSectionFour />
+    </div>
+   <div className="child-two">
+    <BetslipSectionThree />
+   </div>
+    <div className="card p-2 child-three mt-auto">
+      {!minimise && <BetslipsectionTwo />}
+      {minimise && <BetSlipsectionOne />}
+  </div>
+  </div>
+ </>
     );
 }
-
 export default Betslip;
 export function Defaultbetslip()
 {

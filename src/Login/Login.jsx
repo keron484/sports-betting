@@ -32,7 +32,8 @@ function Login()
               <input 
               type="text" 
               className="form-control border-success"
-              id="exampleFormControlInput1" 
+              id="exampleFormControlInput1"
+              placeholder="@example.com" 
               />
               
             </div>

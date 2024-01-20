@@ -93,7 +93,7 @@ const slipslice = createSlice({
             state.num_events = 0;
             state.progress = 0;
         }
-
+        
      }
 })
 export const selectedList = (state) => state.betslip.selections
